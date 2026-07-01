@@ -46,7 +46,10 @@ setTimeout(()=>{
 
 },3500);
 
----------------------
-    setTimeout(() => {
-  window.location.href = "welcome.html";
-}, 3000); // 3 seconds splash
+setTimeout(() => {
+  document.body.classList.add("fade-out");
+
+  setTimeout(() => {
+    window.location.href = "welcome.html";
+  }, 800);
+}, 3000);
