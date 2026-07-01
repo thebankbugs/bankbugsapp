@@ -45,3 +45,8 @@ setTimeout(()=>{
     },600);
 
 },3500);
+
+---------------------
+    setTimeout(() => {
+  window.location.href = "welcome.html";
+}, 3000); // 3 seconds splash
