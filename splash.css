@@ -166,3 +166,11 @@ opacity:1;
 }
 
 }
+body {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+}
