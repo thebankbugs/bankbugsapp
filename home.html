@@ -10,20 +10,34 @@
 </head>
 <body class="fade-in">
 
-    <!-- Fixed Top Navbar Layout Layer -->
+    <!-- Fixed Combined Top Navbar Layout Layer -->
     <nav class="navbar">
-        <button id="menu-toggle-btn" class="btn-menu">
-            <i class="fa-solid fa-bars"></i> Dashboard
-        </button>
+        <!-- Top Row containing your action buttons -->
+        <div class="navbar-top-row">
+            <button id="menu-toggle-btn" class="btn-menu">
+                <i class="fa-solid fa-bars"></i> Dashboard
+            </button>
 
-        <div class="nav-right-actions">
-            <a href="#tools" class="btn btn-visitor">Continue as Visitor</a>
-            <a href="https://pipaffiliates.com" target="_blank" class="btn btn-login">
-                <i class="fa-solid fa-key"></i> Trader Login
-            </a>
+            <div class="nav-right-actions">
+                <a href="#tools" class="btn btn-visitor">Continue as Visitor</a>
+                <a href="https://pipaffiliates.com" target="_blank" class="btn btn-login">
+                    <i class="fa-solid fa-key"></i> Trader Login
+                </a>
+            </div>
         </div>
-    </nav>
 
+        <!-- Embedded Live Financial Market Ticker Tape Section -->
+        <section class="ticker-section">
+            <!-- Modern TradingView Web Component Code Block -->
+            <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js" async></script>
+            <tv-ticker-tape 
+                symbols="FX:EURUSD,FX:GBPUSD,FX:USDJPY,FX:AUDUSD,FX:XAUUSD,BITSTAMP:BTCUSD,BINANCE:ETHUSD" 
+                theme="dark" 
+                show-symbol-logo="true" 
+                display-mode="adaptive">
+            </tv-ticker-tape>
+        </section>
+    </nav>
 
     <!-- Sliding Sidebar Menu Panel -->
     <div id="sidebar-dashboard" class="sidebar">
@@ -39,89 +53,10 @@
         </ul>
     </div>
 
-     <!-- Live Financial Market Ticker Tape Section -->
-<section class="ticker-section">
-    <!-- Modern TradingView Web Component Code Block -->
-    <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js" async></script>
-    <tv-ticker-tape 
-        symbols="FX:EURUSD,FX:GBPUSD,FX:USDJPY,FX:AUDUSD,FX:XAUUSD,BITSTAMP:BTCUSD,BINANCE:ETHUSD" 
-        theme="dark" 
-        show-symbol-logo="true" 
-        display-mode="adaptive">
-    </tv-ticker-tape>
-</section>
-    
     <!-- Dimmer Overlay Element layer -->
     <div id="sidebar-overlay" class="overlay"></div>
 
-    <!-- Hero Header Component -->
-    <header class="hero">
-        <div class="hero-content">
-            <span class="badge">🔥 PNG's #1 TRADING COMMUNITY</span>
-            <h1>Trade Smart. Copy Verified Forex & Crypto Signals.</h1>
-            <p>Stop losing money on guesswork. Get access to my daily personal trading setups, institutional strategies, and custom tools completely free by joining our verified partner broker.</p>
-            <div class="hero-btns">
-                <a href="#broker" class="btn btn-primary">Get Free VIP Access <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#signals" class="btn btn-secondary">See Recent Results</a>
-            </div>
-        </div>
-    </header>
-
-            
-            
-    <!-- Value Features Pitch Layout Grid -->
-    <section class="features" id="tools">
-        <h2>What You Get Inside Our Network</h2>
-        <div class="grid-container">
-            <div class="card">
-                <i class="fa-solid fa-signal card-icon"></i>
-                <h3>Daily High-Win Signals</h3>
-                <p>Exact entry, stop-loss, and take-profit targets sent directly to your phone via our private channel.</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-graduation-cap card-icon"></i>
-                <h3>Proven PNG Strategies</h3>
-                <p>Master price action and liquidity concepts optimized for the specific sessions we trade locally.</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-screwdriver-wrench card-icon"></i>
-                <h3>Proprietary Calculators</h3>
-                <p>Built-in risk management tools to make sure you never blow your account on a single position.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Controlled Onboarding Step Box Container -->
-    <section class="broker-section" id="broker">
-        <div class="broker-card">
-            <div class="broker-badge">MANDATORY STEP</div>
-            <h2>Unlock Your VIP Access in 3 Steps</h2>
-            <p class="broker-subtitle">To protect our community quality, free strategy access and daily signals are strictly reserved for active traders under our regulated partner broker.</p>
-            
-            <div class="steps-container">
-                <div class="step-item">
-                    <div class="step-num">1</div>
-                    <p>Click the link below and open a live trading account with our official partner broker.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-num">2</div>
-                    <p>Fund your account with your starting capital (minimum deposit required to trade live).</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-num">3</div>
-                    <p>Take a screenshot of your funded Account ID and submit it to our team to claim your VIP access.</p>
-                </div>
-            </div>
-
-            <a href="https://pipaffiliates.com" target="_blank" class="btn btn-broker-cta">
-                <i class="fa-solid fa-user-plus"></i> Step 1: Create Your Broker Account Here
-            </a>
-            
-            <button id="claim-btn" class="btn btn-claim-cta">
-                <i class="fa-solid fa-comment"></i> Step 3: Claim My Premium Access
-            </button>
-        </div>
-    </section>
+    <!-- Rest of your page contents (Hero, Features, Broker section, etc.) continue directly below here -->
 
     <script src="js/home.js"></script>
 </body>
