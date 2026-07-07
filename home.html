@@ -55,46 +55,16 @@
     </header>
 <!-- Live Financial Market Ticker Tape Section -->
 <section class="ticker-section">
-    <!-- TradingView Widget Container Element -->
-    <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <script type="text/javascript" src="https://tradingview.com" async>
-        {
-        "symbols": [
-            {
-            "proName": "FX_IDC:EURUSD",
-            "title": "EUR to USD"
-            },
-            {
-            "proName": "FX:GBPUSD",
-            "title": "GBP to USD"
-            },
-            {
-            "proName": "FX:USDJPY",
-            "title": "USD to JPY"
-            },
-            {
-            "proName": "FX:AUDUSD",
-            "title": "AUD to USD"
-            },
-            {
-            "proName": "BITSTAMP:BTCUSD",
-            "title": "Bitcoin / USD"
-            },
-            {
-            "proName": "BINANCE:ETHUSD",
-            "title": "Ethereum / USD"
-            }
-        ],
-        "showSymbolLogo": true,
-        "isTransparent": false,
-        "displayMode": "adaptive",
-        "colorTheme": "dark",
-        "locale": "en"
-        }
-        </script>
-    </div>
+    <!-- Modern TradingView Web Component Code Block -->
+    <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js" async></script>
+    <tv-ticker-tape 
+        symbols="FX:EURUSD,FX:GBPUSD,FX:USDJPY,FX:AUDUSD,FX:XAUUSD,BITSTAMP:BTCUSD,BINANCE:ETHUSD" 
+        theme="dark" 
+        show-symbol-logo="true" 
+        display-mode="adaptive">
+    </tv-ticker-tape>
 </section>
+
             
             
     <!-- Value Features Pitch Layout Grid -->
