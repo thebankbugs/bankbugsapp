@@ -130,6 +130,7 @@ body {
 
 
 /* Sliding Overlaid Dashboard Sidebar Frame */
+/* --- Sidebar Scroll Overlap Patch --- */
 .sidebar {
     position: fixed;
     top: 0;
@@ -138,12 +139,34 @@ body {
     height: 100vh;
     background-color: #12141c;
     border-right: 1px solid #222;
-    z-index: 99999 !important;
+    z-index: 999999 !important; /* Stays clean on top of layers */
     transition: left 0.3s ease-in-out;
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
+
+    /* CRITICAL FIX: Enables smooth scrolling inside the menu if items overflow the screen */
+    overflow-y: auto !important; 
 }
+
+/* Optional: Make the sidebar scrollbar sleek and minimalist */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #12141c;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: var(--card-bg);
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
+}
+
 
 .sidebar.open {
     left: 0;
