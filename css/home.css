@@ -86,6 +86,7 @@ body {
 
 .btn-visitor:hover { color: white; }
 
+/* --- Glowing Premium Trader Login Button Layout --- */
 .btn-login {
     background-color: var(--gold);
     color: var(--bg-dark);
@@ -94,7 +95,39 @@ body {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 6px;
+    position: relative;
+    z-index: 1000001 !important; 
+    pointer-events: auto !important; 
+    cursor: pointer !important;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    
+    /* Adds the steady pulsing gold glow effect */
+    animation: goldGlowPulse 2s infinite alternate;
 }
+
+/* Hover Interactivity Overrides for Desktop Mice */
+.btn-login:hover {
+    transform: translateY(-2px);
+    background-color: #fff; /* Shifts slightly to white for a high-value look */
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.8), 0 0 40px rgba(255, 204, 0, 0.4);
+}
+
+/* Click Action Press Effect */
+.btn-login:active {
+    transform: translateY(0);
+}
+
+/* The Glow Engine Calculation Matrix */
+@keyframes goldGlowPulse {
+    0% {
+        box-shadow: 0 0 8px rgba(255, 204, 0, 0.4), 0 0 15px rgba(255, 204, 0, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 18px rgba(255, 204, 0, 0.7), 0 0 30px rgba(255, 204, 0, 0.4);
+    }
+}
+
 
 /* Sliding Overlaid Dashboard Sidebar Frame */
 .sidebar {
