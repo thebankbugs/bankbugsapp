@@ -204,14 +204,15 @@ body {
     pointer-events: auto;
 }
 
-/* Interface Core Component Styles */
+/* Locate this rule in your css/home.css and change the first padding digit */
 .hero {
-    padding: 160px 8% 80px 8%;
+    padding: 120px 8% 80px 8%; /* Adjusts the text layout distance from your ticker tape */
     text-align: center;
     background: radial-gradient(circle at top, #1e2638 0%, var(--bg-dark) 70%);
     position: relative;
     z-index: 1;
 }
+
 
 .badge {
     background-color: rgba(255, 204, 0, 0.1);
