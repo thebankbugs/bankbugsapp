@@ -1,63 +1,60 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Open your js/home.js file and locate your openSidebar event triggers.
-// Replace those lines with this highly compatible desktop event binder:
-
-if (menuToggleBtn) {
-    // Listens to standard mouse clicks on desktop and tap gestures on mobile
-    menuToggleBtn.addEventListener('click', (e) => {
-        e.preventDefault(); // Prevents browser from stalling the event
-        openSidebar();
-    });
-}
-
-if (closeSidebarBtn) {
-    closeSidebarBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        closeSidebar();
-    });
-}
-
-if (sidebarOverlay) {
-    sidebarOverlay.addEventListener('click', (e) => {
-        e.preventDefault();
-        closeSidebar();
-    });
-}
-
-
-    // WhatsApp Configuration Metrics
+    // Selection Element References
+    const menuToggleBtn = document.getElementById('menu-toggle-btn');
+    const closeSidebarBtn = document.getElementById('close-sidebar-btn');
+    const sidebarDashboard = document.getElementById('sidebar-dashboard');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+    const sidebarLinks = document.querySelectorAll('.sidebar-item');
     const claimButton = document.getElementById('claim-btn');
-    const yourWhatsAppNumber = "67570000000"; // Replace with your number!
 
-    // Function to Open Sidebar Menu
+    // Funnel Contact target setup configurations
+    const yourWhatsAppNumber = "67570000000"; // Put your live phone number here
+
     function openSidebar() {
         sidebarDashboard.classList.add('open');
         sidebarOverlay.classList.add('visible');
     }
 
-    // Function to Close Sidebar Menu
     function closeSidebar() {
         sidebarDashboard.classList.remove('open');
         sidebarOverlay.classList.remove('visible');
     }
 
-    // Event Triggers for Dashboard Sidebar
-    if (menuToggleBtn) menuToggleBtn.addEventListener('click', openSidebar);
-    if (closeSidebarBtn) closeSidebarBtn.addEventListener('click', closeSidebar);
-    if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
+    // High Compatibility Action Event Registration Engine Blocks
+    if (menuToggleBtn) {
+        menuToggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openSidebar();
+        });
+    }
 
-    // Auto-close sidebar dashboard menu when clicking any inner navigation destination anchor
+    if (closeSidebarBtn) {
+        closeSidebarBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeSidebar();
+        });
+    }
+
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeSidebar();
+        });
+    }
+
     sidebarLinks.forEach(link => {
-        link.addEventListener('click', closeSidebar);
+        link.addEventListener('click', () => {
+            closeSidebar();
+        });
     });
 
-    // Verification Desk System (WhatsApp funnel trigger box)
+    // Verification WhatsApp redirection processing logic
     if (claimButton) {
         claimButton.addEventListener('click', () => {
             const accountID = prompt("Please enter your funded Broker Account ID to verify your position status:");
             
             if (accountID && accountID.trim() !== "") {
-                alert(`Account ID (${accountID}) logged. Redirecting you to our validation desk...`);
+                alert(`Account ID (${accountID}) logged. Redirecting to WhatsApp verification...`);
                 
                 const messageText = encodeURIComponent(
                     `Hello Chief! I just registered and funded my account under your partner broker. My Broker Account ID is: ${accountID}. Please verify me and add me to the VIP Signals WhatsApp Group!`
