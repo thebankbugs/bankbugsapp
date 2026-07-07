@@ -1,10 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // DOM Selectors for the Slide-Out Menu System
-    const menuToggleBtn = document.getElementById('menu-toggle-btn');
-    const closeSidebarBtn = document.getElementById('close-sidebar-btn');
-    const sidebarDashboard = document.getElementById('sidebar-dashboard');
-    const sidebarOverlay = document.getElementById('sidebar-overlay');
-    const sidebarLinks = document.querySelectorAll('.sidebar-item');
+    // Open your js/home.js file and locate your openSidebar event triggers.
+// Replace those lines with this highly compatible desktop event binder:
+
+if (menuToggleBtn) {
+    // Listens to standard mouse clicks on desktop and tap gestures on mobile
+    menuToggleBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevents browser from stalling the event
+        openSidebar();
+    });
+}
+
+if (closeSidebarBtn) {
+    closeSidebarBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeSidebar();
+    });
+}
+
+if (sidebarOverlay) {
+    sidebarOverlay.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeSidebar();
+    });
+}
+
 
     // WhatsApp Configuration Metrics
     const claimButton = document.getElementById('claim-btn');
