@@ -22,19 +22,6 @@
                 <i class="fa-solid fa-key"></i> Trader Login
             </a>
         </div>
-    </div>
-        <!-- Live Financial Market Ticker Tape Section -->
-<section class="ticker-section">
-    <!-- Modern TradingView Web Component Code Block -->
-    <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js" async></script>
-    <tv-ticker-tape 
-        symbols="FX:EURUSD,FX:GBPUSD,FX:USDJPY,FX:AUDUSD,FX:XAUUSD,BITSTAMP:BTCUSD,BINANCE:ETHUSD" 
-        theme="dark" 
-        show-symbol-logo="true" 
-        display-mode="adaptive">
-    </tv-ticker-tape>
-    </div>
-</section>
     </nav>
 
 
@@ -51,6 +38,18 @@
             <li><a href="#tools" class="sidebar-item"><i class="fa-solid fa-screwdriver-wrench"></i> Trading Tools</a></li>
         </ul>
     </div>
+
+     <!-- Live Financial Market Ticker Tape Section -->
+<section class="ticker-section">
+    <!-- Modern TradingView Web Component Code Block -->
+    <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js" async></script>
+    <tv-ticker-tape 
+        symbols="FX:EURUSD,FX:GBPUSD,FX:USDJPY,FX:AUDUSD,FX:XAUUSD,BITSTAMP:BTCUSD,BINANCE:ETHUSD" 
+        theme="dark" 
+        show-symbol-logo="true" 
+        display-mode="adaptive">
+    </tv-ticker-tape>
+</section>
     
     <!-- Dimmer Overlay Element layer -->
     <div id="sidebar-overlay" class="overlay"></div>
