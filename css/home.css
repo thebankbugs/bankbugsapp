@@ -32,7 +32,8 @@ body {
     to { opacity: 1; }
 }
 
-/* Fixed Header Navbar Setup Layout */
+/* --- Desktop Click Hijack Override Patch --- */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -43,48 +44,20 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9999 !important;
-    border-bottom: 1px solid #222;
+    /* Pushes the navigation system cleanly above any hidden overlays */
+    z-index: 999999 !important; 
     pointer-events: auto !important;
-}
-
-/* Clickable Menu Trigger Controller UI Element */
-.btn-menu {
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid #333;
-    color: var(--text-light);
-    padding: 10px 18px;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 15px;
-    position: relative;
-    z-index: 10000 !important;
-    pointer-events: auto !important;
-}
-
-.btn-menu:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-    border-color: var(--gold);
-    color: var(--gold);
 }
 
 .nav-right-actions {
     display: flex;
     gap: 15px;
     align-items: center;
+    position: relative;
+    /* Forces elements on the right side to accept desktop mouse input */
+    z-index: 1000000 !important; 
+    pointer-events: auto !important;
 }
-
-.btn-visitor {
-    background: transparent;
-    color: var(--text-muted);
-    font-size: 14px;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 10px 15px;
-}
-
-.btn-visitor:hover { color: white; }
 
 .btn-login {
     background-color: var(--gold);
@@ -94,65 +67,14 @@ body {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 6px;
+    position: relative;
+    /* Guarantees the browser mouse pointer processes this element as clickable */
+    z-index: 1000001 !important; 
+    pointer-events: auto !important; 
+    cursor: pointer !important;
 }
 
-/* Sliding Overlaid Dashboard Sidebar Frame */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: calc(-1 * var(--sidebar-width));
-    width: var(--sidebar-width);
-    height: 100vh;
-    background-color: #12141c;
-    border-right: 1px solid #222;
-    z-index: 99999 !important;
-    transition: left 0.3s ease-in-out;
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar.open {
-    left: 0;
-}
-
-.sidebar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.sidebar-logo { font-size: 18px; font-weight: 800; }
-.gold-text, .text-gold { color: var(--gold); }
-
-.btn-close-sidebar {
-    background: transparent;
-    border: none;
-    color: var(--text-muted);
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.btn-close-sidebar:hover { color: white; }
-.sidebar-links { list-style: none; display: flex; flex-direction: column; gap: 15px; }
-
-.sidebar-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    text-decoration: none;
-    color: var(--text-muted);
-    font-size: 16px;
-    font-weight: 500;
-    padding: 12px 15px;
-    border-radius: 8px;
-}
-
-.sidebar-item i { font-size: 18px; width: 24px; }
-.sidebar-item:hover { background-color: rgba(255, 255, 255, 0.03); color: var(--gold); }
-
-/* Dimmed Overlay Background Styling */
+/* Fixes the inactive overlay state so it cannot block desktop mouse coordinates */
 .overlay {
     position: fixed;
     top: 0;
@@ -162,13 +84,15 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 99998 !important;
     opacity: 0;
-    pointer-events: none;
+    /* CRITICAL: Stops the hidden container from capturing mouse clicks while invisible */
+    pointer-events: none !important; 
     transition: opacity 0.3s ease;
 }
 
+/* Restores layout pointer events ONLY when the mobile dashboard actually slides into view */
 .overlay.visible {
     opacity: 1;
-    pointer-events: auto;
+    pointer-events: auto !important;
 }
 
 /* Interface Core Component Styles */
