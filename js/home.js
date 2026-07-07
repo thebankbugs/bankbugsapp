@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Formulate a clean pre-written text message for the user
                 const messageText = encodeURIComponent(
-                    `Hello Chief! I just registered and funded my account under your partner broker. My Broker Account ID is: ${accountID}. Please verify me and add me to the VIP Signals WhatsApp Group!`
+                    `Hello Otto! I just registered my account under your Partner Broker. My XM Account ID is: ${accountID}. Please verify me and give access to the trading Models & VIP WhatsApp Group!`
                 );
                 
                 // Open the WhatsApp click-to-chat API interface
                 window.open(`https://wa.me/67576766296?text=${messageText}`, '_blank');
             } else if (accountID !== null) {
-                alert("Please enter a VALID XM Trading Account ID to claim your free VIP trading signals.");
+                alert("Please enter a VALID XM Trading Account ID to Access all tools and VIP Whatsapp.");
             }
         });
     }
