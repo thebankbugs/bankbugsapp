@@ -5,22 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BankBugs|FX</title>
     <link rel="stylesheet" href="css/home.css">
-    <!-- FontAwesome for trust badges and icons -->
+    <!-- FontAwesome for layout icons -->
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body class="fade-in">
 
-    <!-- Premium Navigation -->
+    <!-- Top Action Navbar -->
     <nav class="navbar">
-        <div class="logo"><i class="fa-solid fa-chart-line text-gold"></i> PNG<span class="gold-text">TRADERS</span></div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#broker">Our Broker</a></li>
-            <li><a href="#signals">VIP Signals</a></li>
-            <li><a href="#tools">Tools</a></li>
-        </ul>
-        <a href="#broker" class="btn btn-nav">Join Broker</a>
+        <!-- Top Left: Sidebar Trigger Button -->
+        <button id="menu-toggle-btn" class="btn-menu">
+            <i class="fa-solid fa-bars"></i> Dashboard
+        </button>
+
+        <!-- Top Right: User Access Triggers -->
+        <div class="nav-right-actions">
+            <a href="#tools" class="btn btn-visitor">Continue as Visitor</a>
+            <a href="https://pipaffiliates.com" target="_blank" class="btn btn-login"><i class="fa-solid fa-right-to-bracket"></i> Trader Login</a>
+        </div>
     </nav>
+
+    <!-- Sliding Sidebar Dashboard Navigation Menu -->
+    <div id="sidebar-dashboard" class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo"><i class="fa-solid fa-chart-line text-gold"></i> BankBugs|<span class="gold-text">FX</span></div>
+            <button id="close-sidebar-btn" class="btn-close-sidebar"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="#about" class="sidebar-item"><i class="fa-solid fa-circle-info"></i> About Matrix</a></li>
+            <li><a href="#broker" class="sidebar-item"><i class="fa-solid fa-building-columns"></i> Our Broker</a></li>
+            <li><a href="#signals" class="sidebar-item"><i class="fa-solid fa-tower-broadcast"></i> VIP Signals</a></li>
+            <li><a href="#tools" class="sidebar-item"><i class="fa-solid fa-screwdriver-wrench"></i> Trading Tools</a></li>
+        </ul>
+    </div>
+    
+    <!-- Sidebar Overlay Darkener -->
+    <div id="sidebar-overlay" class="overlay"></div>
 
     <!-- Hero Section: Built to Capture Trust Immediately -->
     <header class="hero">
@@ -57,8 +76,6 @@
         </div>
     </section>
 
-  
-
     <!-- The Funnel Step: The Broker Lock Box -->
     <section class="broker-section" id="broker">
         <div class="broker-card">
@@ -82,7 +99,7 @@
             </div>
 
             <!-- YOUR AFFILIATE LINK REPLACES THE '#' HERE -->
-            <a href="https://clicks.pipaffiliates.com/c?c=1241714&l=en&p=1" target="_blank" class="btn btn-broker-cta">
+            <a href="https://pipaffiliates.com" target="_blank" class="btn btn-broker-cta">
                 <i class="fa-solid fa-user-plus"></i> Step 1: Create Your Broker Account Here
             </a>
             
