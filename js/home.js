@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 );
                 
                 // Open the WhatsApp click-to-chat API interface
-                window.open(`https://wa.me{67576766296}?text=${messageText}`, '_blank');
+                window.open(`https://wa.me/67576766296?text=${messageText}`, '_blank');
             } else if (accountID !== null) {
                 alert("Please enter a VALID XM Trading Account ID to claim your free VIP trading signals.");
             }
