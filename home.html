@@ -23,6 +23,17 @@
             </a>
         </div>
     </nav>
+<!-- Live Financial Market Ticker Tape Section -->
+<section class="ticker-section">
+    <!-- Modern TradingView Web Component Code Block -->
+    <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js" async></script>
+    <tv-ticker-tape 
+        symbols="FX:EURUSD,FX:GBPUSD,FX:USDJPY,FX:AUDUSD,FX:XAUUSD,BITSTAMP:BTCUSD,BINANCE:ETHUSD" 
+        theme="dark" 
+        show-symbol-logo="true" 
+        display-mode="adaptive">
+    </tv-ticker-tape>
+</section>
 
     <!-- Sliding Sidebar Menu Panel -->
     <div id="sidebar-dashboard" class="sidebar">
@@ -53,17 +64,6 @@
             </div>
         </div>
     </header>
-<!-- Live Financial Market Ticker Tape Section -->
-<section class="ticker-section">
-    <!-- Modern TradingView Web Component Code Block -->
-    <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js" async></script>
-    <tv-ticker-tape 
-        symbols="FX:EURUSD,FX:GBPUSD,FX:USDJPY,FX:AUDUSD,FX:XAUUSD,BITSTAMP:BTCUSD,BINANCE:ETHUSD" 
-        theme="dark" 
-        show-symbol-logo="true" 
-        display-mode="adaptive">
-    </tv-ticker-tape>
-</section>
 
             
             
