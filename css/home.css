@@ -548,3 +548,87 @@ tv-ticker-tape {
     .values-wrapper, .objectives-wrapper { padding: 25px; }
 }
 
+/* --- Institutional Disclaimer Footer Layout Rules --- */
+.site-footer {
+    background-color: #0b0d11; /* Deep charcoal background shade separates footer from content */
+    border-top: 1px solid #1a1f2c;
+    padding: 60px 8% 30px 8%;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-container {
+    max-width: 950px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Brand Row Styling */
+.footer-brand-row {
+    text-align: left;
+}
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.footer-tagline {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* Legal Box Panel Geometry */
+.footer-disclaimer-box {
+    background-color: rgba(23, 26, 33, 0.4);
+    border: 1px solid #1f2430;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: left;
+}
+
+.footer-disclaimer-box h4 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-disclaimer-box p {
+    font-size: 12px; /* Small, compliant regulatory font sizing */
+    color: #717a8c; /* Muted tone keeps the text readable but secondary */
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.footer-disclaimer-box p:last-of-type {
+    margin-bottom: 0;
+}
+
+.footer-disclaimer-box strong {
+    color: var(--text-muted);
+}
+
+/* Base Copyright strip */
+.footer-copyright-bar {
+    text-align: center;
+    border-top: 1px solid #1a1f2c;
+    padding-top: 25px;
+    font-size: 12px;
+    color: #4a5264;
+}
+
+/* Mobile Responsiveness adjustments */
+@media (max-width: 600px) {
+    .site-footer { padding: 40px 5% 20px 5%; }
+    .footer-disclaimer-box { padding: 15px; }
+}
