@@ -40,7 +40,7 @@ setTimeout(()=>{
 
     setTimeout(()=>{
 
-        window.location.href="homepage/home.html";
+        window.location.href="home.html";
 
     },600);
 
@@ -50,6 +50,6 @@ setTimeout(() => {
   document.body.classList.add("fade-out");
 
   setTimeout(() => {
-    window.location.href = "homepage/home.html";
+    window.location.href = "home.html";
   }, 800);
 }, 3000);
