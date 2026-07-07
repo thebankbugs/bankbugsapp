@@ -247,3 +247,18 @@ body {
 .step-num { background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--gold); flex-shrink: 0; }
 .btn-broker-cta { width: 100%; max-width: 550px; background-color: var(--gold); color: var(--bg-dark); font-size: 18px; margin-bottom: 15px; }
 .btn-claim-cta { width: 100%; max-width: 550px; background-color: transparent; border: 1px dashed var(--text-muted); color: var(--text-muted); font-size: 16px; }
+
+/* --- Live TradingView Ticker Tape Layout Placement --- */
+.ticker-section {
+    width: 100%;
+    margin-top: 70px; /* Forces layout to sit perfectly beneath your fixed navigation layer */
+    background-color: #12141c;
+    border-bottom: 1px solid #222;
+    position: relative;
+    z-index: 10;
+}
+
+.tradingview-widget-container {
+    width: 100%;
+    height: 46px;
+}
