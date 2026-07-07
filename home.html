@@ -53,7 +53,50 @@
             </div>
         </div>
     </header>
-
+<!-- Live Financial Market Ticker Tape Section -->
+<section class="ticker-section">
+    <!-- TradingView Widget Container Element -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://tradingview.com" async>
+        {
+        "symbols": [
+            {
+            "proName": "FX_IDC:EURUSD",
+            "title": "EUR to USD"
+            },
+            {
+            "proName": "FX:GBPUSD",
+            "title": "GBP to USD"
+            },
+            {
+            "proName": "FX:USDJPY",
+            "title": "USD to JPY"
+            },
+            {
+            "proName": "FX:AUDUSD",
+            "title": "AUD to USD"
+            },
+            {
+            "proName": "BITSTAMP:BTCUSD",
+            "title": "Bitcoin / USD"
+            },
+            {
+            "proName": "BINANCE:ETHUSD",
+            "title": "Ethereum / USD"
+            }
+        ],
+        "showSymbolLogo": true,
+        "isTransparent": false,
+        "displayMode": "adaptive",
+        "colorTheme": "dark",
+        "locale": "en"
+        }
+        </script>
+    </div>
+</section>
+            
+            
     <!-- Value Features Pitch Layout Grid -->
     <section class="features" id="tools">
         <h2>What You Get Inside Our Network</h2>
