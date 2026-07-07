@@ -3,40 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website - Home</title>
+    <title>PNG Trading Network | Signals, Strategy & Tools</title>
     <link rel="stylesheet" href="css/home.css">
+    <!-- FontAwesome for trust badges and icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body class="fade-in">
 
-    <!-- Navigation Bar -->
+    <!-- Premium Navigation -->
     <nav class="navbar">
-        <div class="logo">My Brand</div>
+        <div class="logo"><i class="fa-solid fa-chart-line text-gold"></i> PNG<span class="gold-text">TRADERS</span></div>
         <ul class="nav-links">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#broker">Our Broker</a></li>
+            <li><a href="#signals">VIP Signals</a></li>
+            <li><a href="#tools">Tools</a></li>
         </ul>
+        <a href="#broker" class="btn btn-nav">Join Broker</a>
     </nav>
 
-    <!-- Hero Showcase Section -->
+    <!-- Hero Section: Built to Capture Trust Immediately -->
     <header class="hero">
         <div class="hero-content">
-            <h1>Welcome to the Next Chapter</h1>
-            <p>Your journey started with a splash. Now discover what lies ahead.</p>
-            <button id="cta-btn" class="btn">Explore Now</button>
+            <span class="badge">🔥 PNG's #1 TRADING COMMUNITY</span>
+            <h1>Trade Smart. Copy Verified Forex & Crypto Signals.</h1>
+            <p>Stop losing money on guesswork. Get access to my daily personal trading setups, institutional strategies, and custom tools completely free by joining our verified partner broker.</p>
+            <div class="hero-btns">
+                <a href="#broker" class="btn btn-primary">Get Free VIP Access <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#signals" class="btn btn-secondary">See Recent Results</a>
+            </div>
         </div>
     </header>
 
-    <!-- Main Content Section -->
-    <main class="content-section">
-        <h2>Our Core Features</h2>
+    <!-- Value Proposition Section -->
+    <section class="features" id="tools">
+        <h2>What You Get Inside Our Network</h2>
         <div class="grid-container">
-            <div class="card"><h3>Feature 1</h3><p>Brief description details here.</p></div>
-            <div class="card"><h3>Feature 2</h3><p>Brief description details here.</p></div>
-            <div class="card"><h3>Feature 3</h3><p>Brief description details here.</p></div>
+            <div class="card">
+                <i class="fa-solid fa-signal card-icon"></i>
+                <h3>Daily High-Win Signals</h3>
+                <p>Exact entry, stop-loss, and take-profit targets sent directly to your phone via our private channel.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-graduation-cap card-icon"></i>
+                <h3>Proven PNG Strategies</h3>
+                <p>Master price action and liquidity concepts optimized for the specific sessions we trade locally.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-screwdriver-wrench card-icon"></i>
+                <h3>Proprietary Calculators</h3>
+                <p>Built-in risk management tools to make sure you never blow your account on a single position.</p>
+            </div>
         </div>
-    </main>
+    </section>
+
+    <!-- The Funnel Step: The Broker Lock Box -->
+    <section class="broker-section" id="broker">
+        <div class="broker-card">
+            <div class="broker-badge">MANDATORY STEP</div>
+            <h2>Unlock Your VIP Access in 3 Steps</h2>
+            <p class="broker-subtitle">To protect our community quality, free strategy access and daily signals are strictly reserved for active traders under our regulated partner broker.</p>
+            
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <p>Click the link below and open a live trading account with our official partner broker.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <p>Fund your account with your starting capital (minimum deposit required to trade live).</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <p>Take a screenshot of your funded Account ID and submit it to our team to claim your VIP access.</p>
+                </div>
+            </div>
+
+            <!-- YOUR AFFILIATE LINK REPLACES THE '#' HERE -->
+            <a href="https://your-broker-affiliate-link.com" target="_blank" class="btn btn-broker-cta">
+                <i class="fa-solid fa-user-plus"></i> Step 1: Create Your Broker Account Here
+            </a>
+            
+            <button id="claim-btn" class="btn btn-claim-cta">
+                <i class="fa-solid fa-envelope"></i> Step 3: Claim My Premium Access
+            </button>
+        </div>
+    </section>
 
     <script src="js/home.js"></script>
 </body>
