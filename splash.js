@@ -1,8 +1,8 @@
 const messages = [
 
-    "Initializing TheBankBugs...",
+    "Initializing BankBugs|FX...",
 
-    "Loading Trading Academy...",
+    "Loading Trading systems...",
 
     "Preparing Starter Dashboard...",
 
@@ -40,7 +40,7 @@ setTimeout(()=>{
 
     setTimeout(()=>{
 
-        window.location.href="pages/welcome.html";
+        window.location.href="homepage/home.html";
 
     },600);
 
@@ -50,6 +50,6 @@ setTimeout(() => {
   document.body.classList.add("fade-out");
 
   setTimeout(() => {
-    window.location.href = "pages/welcome.html";
+    window.location.href = "homepage/home.html";
   }, 800);
 }, 3000);
