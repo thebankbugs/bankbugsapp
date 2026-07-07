@@ -208,6 +208,33 @@ body {
 .sidebar-item i { font-size: 18px; width: 24px; }
 .sidebar-item:hover { background-color: rgba(255, 255, 255, 0.03); color: var(--gold); }
 
+/* --- Tighten Sidebar Menu Spacing --- */
+
+/* 1. Reduce the gap between the list items */
+.sidebar-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px !important; /* Changed from 15px to 6px for tighter layout vertical stacking */
+}
+
+/* 2. Reduce the inside vertical padding of each item link click box */
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 15px; /* Slightly lowered font size to look cleaner in tight layouts */
+    font-weight: 500;
+    
+    /* CRITICAL SPACING TWEAK: Changes top/bottom to 6px and left/right to 12px */
+    padding: 6px 12px !important; 
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+
 /* Dimmed Overlay Background Styling */
 .overlay {
     position: fixed;
