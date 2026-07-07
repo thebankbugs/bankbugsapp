@@ -804,3 +804,24 @@ body {
     border-color: white;
     color: white;
 }
+/* Update your existing .navbar rule or add this to the very bottom of css/home.css */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 2000 !important; /* Forces the navbar to stay above hidden page background wraps */
+    pointer-events: auto !important; /* Guarantees desktop mouse clicks can hit the buttons */
+}
+
+/* Ensure the button element specifically takes click priority on desktops */
+.btn-menu {
+    position: relative;
+    z-index: 2001 !important;
+    pointer-events: auto !important;
+    cursor: pointer; /* Shows the clickable pointer hand on desktop mouseover */
+}
+
+/* Fix any potential hero background bleed blocking the top of the desktop page */
+.hero {
+    position: relative;
+    z-index: 1; /* Pushes the main page content safely beneath the fixed header layer */
+}
