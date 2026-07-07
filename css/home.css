@@ -316,3 +316,90 @@ tv-ticker-tape {
     display: block;
 }
 
+/* --- High-Compression Categorized Sidebar Layout Rules --- */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: calc(-1 * var(--sidebar-width));
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: #12141c;
+    border-right: 1px solid #222;
+    z-index: 999999 !important;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 25px 15px; /* Tighter perimeter cushion padding */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Independent Scroll Engine Block */
+.sidebar-scroll-container {
+    flex-grow: 1;
+    overflow-y: auto !important; /* Enables scroll mechanism inside your sidebar layout frame */
+    padding-right: 4px;
+}
+
+/* Institutional Category Header Design labels */
+.sidebar-group {
+    margin-bottom: 14px; /* Space between each category row pack */
+}
+
+.sidebar-group-title {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+    padding-left: 10px;
+    opacity: 0.6; /* Keeps titles clean and subordinate to active links */
+}
+
+/* Compressed Stacking Rules */
+.sidebar-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px !important; /* Very small spacing gap between individual dashboard button nodes */
+}
+
+/* Corporate Link Layout Design nodes */
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 14px; /* Compact reading layout size */
+    font-weight: 500;
+    padding: 6px 10px !important; /* Compressed inner height padding */
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+/* Uniform Icon Width System Alignment Grid */
+.sidebar-item i {
+    font-size: 15px;
+    width: 20px; /* Fixed anchor grid prevents uneven text shifting */
+    text-align: center;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+/* Hover highlights for active selection status tracking */
+.sidebar-item:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+    color: white;
+}
+
+.sidebar-item:hover i {
+    color: var(--gold); /* Icons switch to premium branding gold on focus hover */
+}
+
+/* Custom Scrollbar Presentation styling rules for sleek UI */
+.sidebar-scroll-container::-webkit-scrollbar { width: 4px; }
+.sidebar-scroll-container::-webkit-scrollbar-track { background: transparent; }
+.sidebar-scroll-container::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.05); border-radius: 10px; }
+.sidebar-scroll-container::-webkit-scrollbar-thumb:hover { background: var(--gold); }
