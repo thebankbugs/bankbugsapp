@@ -36,13 +36,13 @@ setTimeout(()=>{
 
     document.body.style.opacity="0";
 
-    document.body.style.transition="opacity .6s";
+    document.body.style.transition="opacity .9s";
 
     setTimeout(()=>{
 
         window.location.href="home.html";
 
-    },500);
+    },100);
 
 },5000);
 
