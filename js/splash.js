@@ -42,9 +42,9 @@ setTimeout(()=>{
 
         window.location.href="home.html";
 
-    },600);
+    },500);
 
-},3500);
+},5000);
 
 setTimeout(() => {
   document.body.classList.add("fade-out");
