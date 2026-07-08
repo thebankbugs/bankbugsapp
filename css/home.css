@@ -1068,7 +1068,10 @@ tv-ticker-tape {
     .node-number { font-size: 26px; }
 }
 
-/* Socials Link Matrix Section */
+/* ==========================================================================
+   SECTION 4: VERIFIED OFFICIAL BRAND SOCIAL INTERACTION INDEX
+   ========================================================================== */
+
 .socials-index-section {
     padding: 60px 8%;
     background-color: #0c0e12;
@@ -1076,31 +1079,110 @@ tv-ticker-tape {
     text-align: center;
 }
 
-.socials-container-inner h4 { font-size: 18px; color: white; margin-bottom: 8px; font-weight: 600; }
-.socials-container-inner p { font-size: 14px; color: var(--text-muted); margin-bottom: 30px; }
+.socials-container-inner h4 { 
+    font-size: 18px; 
+    color: white; 
+    margin-bottom: 8px; 
+    font-weight: 600; 
+}
 
+.socials-container-inner p { 
+    font-size: 14px; 
+    color: var(--text-muted); 
+    margin-bottom: 35px; 
+}
+
+/* Fluid Horizontal Grid Track containing the social nodes */
 .social-links-grid {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
-.social-anchor {
-    display: inline-flex;
+/* Institutional Icon Dashboard Box Footprint Geometry */
+.social-icon-card {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    background-color: #12141c;
+    justify-content: center;
+    background-color: var(--card-bg);
     border: 1px solid #1f2431;
-    color: var(--text-light);
-    border-radius: 6px;
+    border-radius: 10px;
+    width: 120px;
+    height: 110px; /* Symmetrical box shape layout footprints */
     text-decoration: none;
-    font-size: 14px;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s, box-shadow 0.25s;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Bounding box centering the vector graphics */
+.brand-vector-box {
+    font-size: 26px; /* Heavy, highly recognizable vector dimensions */
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    transition: color 0.25s ease;
+}
+
+/* Text layer below vector indicators */
+.brand-profile-label {
+    font-size: 12px;
     font-weight: 600;
-    transition: all 0.2s;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    transition: color 0.25s ease;
+}
+
+/* Hover Elevation Matrix States */
+.social-icon-card:hover {
+    transform: translateY(-4px);
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+.social-icon-card:hover .brand-profile-label {
+    color: white; /* Illuminates text label to solid white on focus trigger */
+}
+
+/* Hardware Accelerated Color Shifting Filters Matching Official Corporate Assets */
+.tiktok-brand:hover { 
+    border-color: #ff0050; 
+    box-shadow: 0 4px 15px rgba(255, 0, 80, 0.2); 
+}
+.tiktok-brand:hover .brand-vector-box { color: #00f2fe; text-shadow: 2px 2px #ff0050; } /* Matches classic dual-color TikTok flare */
+
+.facebook-brand:hover { 
+    border-color: #1877f2; 
+    box-shadow: 0 4px 15px rgba(24, 119, 242, 0.25); 
+}
+.facebook-brand:hover .brand-vector-box { color: #1877f2; }
+
+.instagram-brand:hover { 
+    border-color: #e1306c; 
+    box-shadow: 0 4px 15px rgba(225, 48, 108, 0.25); 
+}
+.instagram-brand:hover .brand-vector-box { color: #e1306c; }
+
+.whatsapp-brand:hover { 
+    border-color: #25d366; 
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25); 
+}
+.whatsapp-brand:hover .brand-vector-box { color: #25d366; }
+
+.gmail-brand:hover { 
+    border-color: #ea4335; 
+    box-shadow: 0 4px 15px rgba(234, 67, 53, 0.25); 
+}
+.gmail-brand:hover .brand-vector-box { color: #ea4335; }
+
+/* Mobile scaling bounds mapping overrides */
+@media (max-width: 500px) {
+    .social-links-grid { gap: 12px; }
+    .social-icon-card { width: 95px; height: 95px; }
+    .brand-vector-box { font-size: 22px; margin-bottom: 6px; }
+    .brand-profile-label { font-size: 11px; }
 }
 
 /* Elegant Hover Branding Profiles */
@@ -1110,12 +1192,4 @@ tv-ticker-tape {
 .whatsapp-color:hover { border-color: #25d366; color: #25d366; background: rgba(37,211,102,0.02); }
 .gmail-color:hover { border-color: #ea4335; color: #ea4335; background: rgba(234,67,53,0.02); }
 
-/* Mobile Structural Adaptations */
-@media (max-width: 600px) {
-    .hero-ecosystem h1 { font-size: 28px; }
-    .hero-lead-text { font-size: 15px; }
-    .funnel-lock-container { padding: 35px 20px; }
-    .funnel-step-node { flex-direction: column; gap: 12px; }
-    .gateway-action-row { flex-direction: column; gap: 12px; }
-    .btn-primary-glowing, .btn-secondary-glowing { display: block; width: 100%; text-align: center; }
-}
+
