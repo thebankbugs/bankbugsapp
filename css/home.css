@@ -735,7 +735,7 @@ tv-ticker-tape {
 
 /* Structural Inventory Section */
 .ecosystem-inventory {
-    padding: 80px 8%;
+    padding: 40px 8%;
     background-color: #0c0e12;
     border-top: 1px solid #1a1f2c;
     text-align: center;
@@ -749,7 +749,7 @@ tv-ticker-tape {
 /* --- High-Performance Horizontal Manual Slider Layout --- */
 
 .ecosystem-inventory {
-    padding: 30px 0;
+    padding: 15px 0;
     background-color: #0c0e12;
     border-top: 1px solid #1a1f2c;
     text-align: center;
@@ -786,7 +786,7 @@ tv-ticker-tape {
     background-color: var(--card-bg);
     border: 1px solid #1c202a;
     border-radius: 12px;
-    padding: 25px;
+    padding: 12px;
     text-align: left;
     width: 325px;
     display: flex;
