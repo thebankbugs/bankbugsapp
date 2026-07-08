@@ -11,58 +11,94 @@
 </head>
 <body class="fade-in">
 
-    <!-- Fixed Combined Top Navbar Layout Layer (Shared across Ecosystem) -->
+    <!-- Fixed Top Navbar Layout Layer -->
     <nav class="navbar">
-        <div class="navbar-top-row">
-            <button id="menu-toggle-btn" class="btn-menu">
-                <i class="fa-solid fa-bars"></i> Dashboard
-            </button>
+        <button id="menu-toggle-btn" class="btn-menu">
+            <i class="fa-solid fa-bars"></i> View Dashboard
+        </button>
 
-            <div class="nav-right-actions">
-                <a href="home.html" class="btn btn-visitor">Back to Home</a>
-                <a href="https://pipaffiliates.com" target="_blank" class="btn btn-login">
-                    <i class="fa-solid fa-key"></i> Trader Login
-                </a>
-            </div>
+        <div class="nav-right-actions">
+            <a href="#tools" class="btn btn-visitor">Browsing as Visitor</a>
+            <a href="https://pipaffiliates.com" target="_blank" class="btn btn-login">
+                <i class="fa-solid fa-key"></i> Trader Login
+            </a>
         </div>
-
-        <!-- Embedded Live Financial Market Ticker Tape Section -->
-        <section class="ticker-section">
-            <script type="module" src="https://tradingview-widget.com" async></script>
-            <tv-ticker-tape 
-                symbols="FX:EURUSD,FX:GBPUSD,FX:USDJPY,FX:AUDUSD,FX:XAUUSD,BITSTAMP:BTCUSD,BINANCE:ETHUSD" 
-                theme="dark" 
-                show-symbol-logo="true" 
-                display-mode="adaptive">
-            </tv-ticker-tape>
-        </section>
     </nav>
 
-    <!-- Sliding Sidebar Menu Panel (Shared across Ecosystem) -->
-    <div id="sidebar-dashboard" class="sidebar">
-        <div class="sidebar-header">
-            <div class="sidebar-logo"><i class="fa-solid fa-chart-line text-gold"></i> BankBugs|<span class="gold-text">FX</span></div>
-            <button id="close-sidebar-btn" class="btn-close-sidebar"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div class="sidebar-scroll-container">
-            <div class="sidebar-group">
-                <span class="sidebar-group-title">The Foundation</span>
-                <ul class="sidebar-links">
-                    <li><a href="home.html#home" class="sidebar-item"><i class="fa-solid fa-house-chimney"></i> Homepage</a></li>
-                    <li><a href="home.html#about" class="sidebar-item"><i class="fa-solid fa-user-tie"></i> About Me</a></li>
-                    <li><a href="home.html#broker" class="sidebar-item"><i class="fa-solid fa-building-columns text-gold"></i> Our Broker</a></li>
-                </ul>
-            </div>
-            <div class="sidebar-group">
-                <span class="sidebar-group-title">Ecosystem & Offers</span>
-                <ul class="sidebar-links">
-                    <li><a href="offers.html" class="sidebar-item"><i class="fa-solid fa-briefcase"></i> Prop Firms</a></li>
-                    <li><a href="offers.html" class="sidebar-item"><i class="fa-solid fa-laptop-code"></i> Trading Platforms</a></li>
-                    <li><a href="offers.html" class="sidebar-item"><i class="fa-solid fa-tags"></i> Your Offers</a></li>
-                </ul>
-            </div>
-        </div>
+
+   <!-- Sliding Sidebar Menu Panel with Institutional Groupings -->
+<div id="sidebar-dashboard" class="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-logo"><i class="fa-solid fa-chart-line text-gold"></i> BankBugs|<span class="gold-text">FX</span></div>
+        <button id="close-sidebar-btn" class="btn-close-sidebar"><i class="fa-solid fa-xmark"></i></button>
     </div>
+
+    <!-- Scrollable Links Container Area -->
+    <div class="sidebar-scroll-container">
+        
+        <!-- CATEGORY 1: FOUNDATION & BROKER ENTRY -->
+        <div class="sidebar-group">
+            <span class="sidebar-group-title">The Foundation</span>
+            <ul class="sidebar-links">
+                <li><a href="#home" class="sidebar-item"><i class="fa-solid fa-house-chimney"></i> Homepage</a></li>
+                <li><a href="#about" class="sidebar-item"><i class="fa-solid fa-user-tie"></i> About Me</a></li>
+                <li><a href="#broker" class="sidebar-item"><i class="fa-solid fa-building-columns text-gold"></i> Our Broker</a></li>
+            </ul>
+        </div>
+
+        <!-- CATEGORY 2: THE ECOSYSTEM -->
+        <div class="sidebar-group">
+            <span class="sidebar-group-title">Ecosystem & Offers</span>
+            <ul class="sidebar-links">
+                <li><a href="#propfirm" class="sidebar-item"><i class="fa-solid fa-briefcase"></i> Prop Firms</a></li>
+                <li><a href="#platforms" class="sidebar-item"><i class="fa-solid fa-laptop-code"></i> Trading Platforms</a></li>
+                <li><a href="offers.html" class="sidebar-item"><i class="fa-solid fa-tags"></i> Our Services</a></li>
+            </ul>
+        </div>
+
+        <!-- CATEGORY 3: BANKBUGS SYSTEM INTEL -->
+        <div class="sidebar-group">
+            <span class="sidebar-group-title">System & Strategy</span>
+            <ul class="sidebar-links">
+                <li><a href="#system" class="sidebar-item"><i class="fa-solid fa-network-wired"></i> My Trading System</a></li>
+                <li><a href="#entry" class="sidebar-item"><i class="fa-solid fa-crosshairs"></i> Entry Models I Use</a></li>
+                <li><a href="#retail" class="sidebar-item"><i class="fa-solid fa-magnifying-glass-chart"></i> Retail Trading Models</a></li>
+                <li><a href="#data" class="sidebar-item"><i class="fa-solid fa-database"></i> Backtested Data</a></li>
+                <li><a href="#survival" class="sidebar-item"><i class="fa-solid fa-shield-halved"></i> How My System Survives</a></li>
+            </ul>
+        </div>
+
+        <!-- CATEGORY 4: EXECUTION MATRIX -->
+        <div class="sidebar-group">
+            <span class="sidebar-group-title">Risk & Execution</span>
+            <ul class="sidebar-links">
+                <li><a href="#time" class="sidebar-item"><i class="fa-solid fa-clock"></i> When To Trade (PNG Time)</a></li>
+                <li><a href="#calculators" class="sidebar-item"><i class="fa-solid fa-calculator"></i> Forex Calculators</a></li>
+                <li><a href="#tools" class="sidebar-item"><i class="fa-solid fa-gears"></i> My Trading Tools</a></li>
+                <li><a href="#risk" class="sidebar-item"><i class="fa-solid fa-scale-balanced"></i> Risk Management Model</a></li>
+                <li><a href="#discipline" class="sidebar-item"><i class="fa-solid fa-brain"></i> Psychology & Discipline</a></li>
+                <li><a href="#journals" class="sidebar-item"><i class="fa-solid fa-book-bookmark"></i> Trades & Journals</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+    </div>
+
+     <!-- Live Financial Market Ticker Tape Section -->
+<section class="ticker-section">
+    <!-- Modern TradingView Web Component Code Block -->
+    <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js" async></script>
+    <tv-ticker-tape 
+        symbols="FX:EURUSD,FX:GBPUSD,FX:USDJPY,FX:AUDUSD,FX:XAUUSD,BITSTAMP:BTCUSD,BINANCE:ETHUSD" 
+        theme="dark" 
+        show-symbol-logo="true" 
+        display-mode="adaptive">
+    </tv-ticker-tape>
+</section>
+    
     <div id="sidebar-overlay" class="overlay"></div>
 
     <!-- UNIQUE CONTENT BODY: Dedicated Premium Offers Panels -->
