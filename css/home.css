@@ -749,7 +749,7 @@ tv-ticker-tape {
 /* --- High-Performance Horizontal Manual Slider Layout --- */
 
 .ecosystem-inventory {
-    padding: 60px 0;
+    padding: 30px 0;
     background-color: #0c0e12;
     border-top: 1px solid #1a1f2c;
     text-align: center;
@@ -765,7 +765,7 @@ tv-ticker-tape {
 .carousel-viewport {
     width: 100%;
     overflow-x: scroll; /* Forces scroll capabilities across all browser types */
-    padding: 20px 8%;
+    padding: 10px 8%;
     scroll-behavior: smooth; /* Animates the slide transition softly */
     scrollbar-width: none; /* Removes layout tracks on Firefox */
 }
@@ -776,7 +776,7 @@ tv-ticker-tape {
 
 .carousel-track {
     display: flex;
-    gap: 24px;
+    gap: 12px;
     width: max-content; /* Guarantees layout track is endlessly wide to hold items side-by-side */
     flex-wrap: nowrap;
 }
