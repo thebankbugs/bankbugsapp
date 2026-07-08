@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebarLinks = document.querySelectorAll('.sidebar-item');
     const claimButton = document.getElementById('claim-btn');
 
-    // Funnel Contact target setup configurations
-    const yourWhatsAppNumber = "67570000000"; // Put your live phone number here
+    // NEW SELECTOR: Grabs your entire main content container body section
+    const mainContentBody = document.querySelector('.main-layout-container');
 
     function openSidebar() {
         sidebarDashboard.classList.add('open');
@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuToggleBtn) {
         menuToggleBtn.addEventListener('click', (e) => {
             e.preventDefault();
+            e.stopPropagation(); // Stops click from bleeding into background components
             openSidebar();
         });
     }
@@ -42,6 +43,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // NEW INTERACTION MECHANISM: Auto-closes sidebar if user clicks main page content text or backgrounds
+    if (mainContentBody) {
+        mainContentBody.addEventListener('click', () => {
+            // Only fires close protocol if the sidebar dashboard is actually open
+            if (sidebarDashboard.classList.contains('open')) {
+                closeSidebar();
+            }
+        });
+    }
+
+    // Prevent clicks inside the actual sidebar panel from triggering background screen close events
+    if (sidebarDashboard) {
+        sidebarDashboard.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+        });
+    }
+
     sidebarLinks.forEach(link => {
         link.addEventListener('click', () => {
             closeSidebar();
@@ -51,13 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Verification WhatsApp redirection processing logic
     if (claimButton) {
         claimButton.addEventListener('click', () => {
+            const yourWhatsAppNumber = "67570000000"; // Ensure your live number is here
             const accountID = prompt("Please enter your funded Broker Account ID to verify your position status:");
             
             if (accountID && accountID.trim() !== "") {
                 alert(`Account ID (${accountID}) logged. Redirecting to WhatsApp verification...`);
                 
                 const messageText = encodeURIComponent(
-                    `Hello Chief! I just registered and funded my account under your partner broker. My Broker Account ID is: ${accountID}. Please verify me and add me to the VIP Signals WhatsApp Group!`
+                    `Hello Otto! I just registered and funded my account under your partner broker. My Broker Account ID is: ${accountID}. Please verify me and add me to the VIP Signals WhatsApp Group!`
                 );
                 
                 window.open(`https://wa.me/67576766296?text=${messageText}`, '_blank');
