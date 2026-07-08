@@ -632,3 +632,294 @@ tv-ticker-tape {
     .site-footer { padding: 40px 5% 20px 5%; }
     .footer-disclaimer-box { padding: 15px; }
 }
+/* --- Corporate Ecosystem Body Layout Rules --- */
+
+.main-layout-container {
+    padding-top: 110px; /* Gives perfect clearance below your pinned navbar and ticker tape layer */
+    width: 100%;
+}
+
+/* Authentic Hero Structure */
+.hero-ecosystem {
+    padding: 80px 8% 60px 8%;
+    background: radial-gradient(circle at top, #141923 0%, var(--bg-dark) 90%);
+    text-align: center;
+}
+
+.hero-inner {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.badge-institutional {
+    background-color: rgba(255, 204, 0, 0.08);
+    border: 1px solid rgba(255, 204, 0, 0.2);
+    color: var(--gold);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-ecosystem h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 25px 0 15px 0;
+    color: white;
+}
+
+.hero-lead-text {
+    font-size: 18px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 720px;
+    margin: 0 auto 30px auto;
+}
+
+/* Strategic Mission Statement Box */
+.hero-core-statement {
+    background-color: #12151d;
+    border: 1px solid #1f2431;
+    border-left: 4px solid var(--gold);
+    padding: 24px;
+    border-radius: 0 8px 8px 0;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.hero-core-statement p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+.hero-core-statement strong { color: white; }
+
+/* Dual Action Rows */
+.gateway-action-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-primary-glowing {
+    background-color: var(--action-blue);
+    color: white;
+    padding: 14px 28px;
+    font-weight: 700;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s;
+    font-size: 15px;
+    box-shadow: 0 4px 15px rgba(0, 112, 243, 0.3);
+}
+
+.btn-primary-glowing:hover { background-color: #005ecf; }
+
+.btn-secondary-glowing {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid #333;
+    color: white;
+    padding: 14px 28px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 15px;
+}
+
+.btn-secondary-glowing:hover { background-color: rgba(255, 255, 255, 0.08); border-color: var(--gold); }
+
+/* Structural Inventory Section */
+.ecosystem-inventory {
+    padding: 80px 8%;
+    background-color: #0c0e12;
+    border-top: 1px solid #1a1f2c;
+    text-align: center;
+}
+
+.section-header-centered h2 { font-size: 30px; color: white; margin-bottom: 12px; font-weight: 700; }
+.section-header-centered p { font-size: 16px; color: var(--text-muted); max-width: 600px; margin: 0 auto 50px auto; line-height: 1.6; }
+
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+}
+
+.inventory-card {
+    background-color: var(--card-bg);
+    border: 1px solid #1c202a;
+    border-radius: 8px;
+    padding: 30px 25px;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.inventory-card:hover { transform: translateY(-2px); border-color: #2b3142; }
+.inventory-icon { font-size: 26px; color: var(--action-blue); margin-bottom: 18px; display: block; }
+.inventory-card h3 { font-size: 18px; color: white; margin-bottom: 10px; font-weight: 600; }
+.inventory-card p { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+
+/* Opportunity Callout */
+.opportunity-breakout-box {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #131722 0%, #1a2233 100%);
+    border: 1px solid rgba(255, 204, 0, 0.2);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: left;
+}
+
+.opportunity-breakout-box h4 { font-size: 18px; color: var(--gold); margin-bottom: 8px; font-weight: 700; }
+.opportunity-breakout-box p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+
+/* 3-Step Funnel Section */
+.funnel-gatekeeper-section {
+    padding: 90px 8%;
+    background-color: var(--bg-dark);
+}
+
+.funnel-lock-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #12141c;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 50px 40px;
+    position: relative;
+    text-align: center;
+}
+
+.mandatory-ribbon {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffcc00;
+    color: #0f1115;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 4px 16px;
+    border-radius: 4px;
+}
+
+.funnel-lock-container h2 { font-size: 28px; color: white; margin-bottom: 12px; font-weight: 700; margin-top: 10px; }
+.funnel-subtitle { font-size: 15px; color: var(--text-muted); line-height: 1.6; max-width: 650px; margin: 0 auto 40px auto; }
+.funnel-subtitle strong { color: var(--gold); }
+
+/* Vertically Stacked Steps */
+.funnel-steps-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: left;
+}
+
+.funnel-step-node {
+    display: flex;
+    gap: 25px;
+    background-color: rgba(255,255,255,0.01);
+    border: 1px solid #1c202a;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.node-number {
+    font-size: 28px;
+    font-weight: 800;
+    color: rgba(255, 204, 0, 0.2);
+    line-height: 1;
+}
+
+.node-body h5 { font-size: 16px; color: white; margin-bottom: 6px; font-weight: 600; }
+.node-body p { font-size: 14px; color: var(--text-muted); line-height: 1.5; margin-bottom: 15px; }
+
+/* Micro Action Handles */
+.node-action-btn, .node-whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: rgba(255, 204, 0, 0.08);
+    border: 1px solid rgba(255, 204, 0, 0.2);
+    color: var(--gold);
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.node-action-btn:hover { background-color: var(--gold); color: #000; }
+
+.node-whatsapp-btn {
+    background-color: rgba(37, 211, 102, 0.08);
+    border: 1px solid rgba(37, 211, 102, 0.2);
+    color: #25d366;
+}
+
+.node-whatsapp-btn:hover { background-color: #25d366; color: #000; }
+
+/* Socials Link Matrix Section */
+.socials-index-section {
+    padding: 60px 8%;
+    background-color: #0c0e12;
+    border-top: 1px solid #1a1f2c;
+    text-align: center;
+}
+
+.socials-container-inner h4 { font-size: 18px; color: white; margin-bottom: 8px; font-weight: 600; }
+.socials-container-inner p { font-size: 14px; color: var(--text-muted); margin-bottom: 30px; }
+
+.social-links-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-anchor {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #12141c;
+    border: 1px solid #1f2431;
+    color: var(--text-light);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+/* Elegant Hover Branding Profiles */
+.tiktok-color:hover { border-color: #ff0050; color: #ff0050; background: rgba(255,0,80,0.02); }
+.facebook-color:hover { border-color: #1877f2; color: #1877f2; background: rgba(24,119,242,0.02); }
+.instagram-color:hover { border-color: #c13584; color: #c13584; background: rgba(193,53,132,0.02); }
+.whatsapp-color:hover { border-color: #25d366; color: #25d366; background: rgba(37,211,102,0.02); }
+.gmail-color:hover { border-color: #ea4335; color: #ea4335; background: rgba(234,67,53,0.02); }
+
+/* Mobile Structural Adaptations */
+@media (max-width: 600px) {
+    .hero-ecosystem h1 { font-size: 28px; }
+    .hero-lead-text { font-size: 15px; }
+    .funnel-lock-container { padding: 35px 20px; }
+    .funnel-step-node { flex-direction: column; gap: 12px; }
+    .gateway-action-row { flex-direction: column; gap: 12px; }
+    .btn-primary-glowing, .btn-secondary-glowing { display: block; width: 100%; text-align: center; }
+}
