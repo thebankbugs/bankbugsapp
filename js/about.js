@@ -136,3 +136,24 @@ if (funnelViewport && funnelLeftBtn && funnelRightBtn) {
         });
     });
 }
+/**
+ * BankBugs|FX - About Page Sub-System Controller
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    const viewport = document.getElementById('pillarViewport');
+    const prevBtn = document.getElementById('pillarPrev');
+    const nextBtn = document.getElementById('pillarNext');
+
+    if (viewport && prevBtn && nextBtn) {
+        // Precise scroll increment metrics mapping directly to column tracking sizes
+        const scrollDelta = 305; 
+
+        nextBtn.addEventListener('click', () => {
+            viewport.scrollBy({ left: scrollDelta, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            viewport.scrollBy({ left: -scrollDelta, behavior: 'smooth' });
+        });
+    }
+});
