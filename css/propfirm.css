@@ -1183,3 +1183,350 @@ tv-ticker-tape {
     padding-bottom: 15px;
 }
 
+/* ==========================================================================
+   BANKBUGS|FX PROPFIRM MATRIX - ISOLATED STYLESHEET
+   ========================================================================== */
+
+/* Layout Foundation Clearance Context */
+.main-content-clearance {
+    padding-top: 62px !important; /* Clears dual fixed navigation bars perfectly without black gaps */
+    background-color: #0f1115;
+    min-height: calc(100vh - 62px);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #f3f4f6;
+}
+
+.propfirm-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+/* Strategic Intro Elements */
+.propfirm-hero-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 52px auto;
+}
+
+.propfirm-tag {
+    color: #ffcc00;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 204, 0, 0.05);
+    padding: 6px 14px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 204, 0, 0.1);
+}
+
+.propfirm-title {
+    margin: 0 0 16px 0;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #f3f4f6;
+}
+
+.propfirm-lead {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #9ca3af;
+}
+
+/* The High-Ticket Structural Grid Layout */
+.propfirm-comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    align-items: start;
+}
+
+@media (max-width: 868px) {
+    .propfirm-comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* Base Allocation Card Engine */
+.firm-card {
+    background-color: #171a21;
+    border-radius: 8px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.firm-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Strict Brand Accents Rules mapping */
+.premium-border-gold {
+    border: 1px solid rgba(255, 204, 0, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.premium-border-blue {
+    border: 1px solid rgba(0, 112, 243, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Header Status Layout */
+.firm-badge-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.firm-status-badge {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 3px;
+}
+
+.status-active {
+    background-color: rgba(255, 204, 0, 0.1);
+    color: #ffcc00;
+    border: 1px solid rgba(255, 204, 0, 0.2);
+}
+
+.status-speed {
+    background-color: rgba(0, 112, 243, 0.1);
+    color: #0070f3;
+    border: 1px solid rgba(0, 112, 243, 0.2);
+}
+
+.firm-highlight-text {
+    font-size: 12px;
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+/* Identity Blocks styling */
+.firm-identity {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.firm-logo-placeholder {
+    width: 48px;
+    height: 48px;
+    background-color: #12141c;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo-icon-gold { color: #ffcc00; font-size: 20px; }
+.logo-icon-blue { color: #0070f3; font-size: 20px; }
+
+.firm-identity h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #f3f4f6;
+}
+
+.firm-identity p {
+    margin: 2px 0 0 0;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.firm-description {
+    margin: 0 0 28px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #9ca3af;
+    min-height: 42px;
+}
+
+/* Institutional Parameter List Block */
+.firm-spec-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background-color: #12141c;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    padding-bottom: 10px;
+}
+
+.spec-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.spec-label {
+    color: #9ca3af;
+}
+
+.spec-value {
+    font-weight: 600;
+    color: #f3f4f6;
+}
+
+.text-green { color: #10b981; }
+.text-blue { color: #0070f3; }
+
+/* Ecosystem Synergy Boxes */
+.firm-bonus-box {
+    border-left: 2px solid rgba(255, 255, 255, 0.15);
+    padding-left: 16px;
+    margin-bottom: 32px;
+}
+
+.firm-bonus-box h5 {
+    margin: 0 0 6px 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.firm-bonus-box h5 i {
+    color: #10b981;
+    font-size: 11px;
+}
+
+.firm-bonus-box p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #9ca3af;
+}
+
+/* Button Call-To-Action Framework */
+.firm-action-btn {
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 16px 24px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-gold {
+    background-color: #ffcc00;
+    color: #0f1115;
+}
+
+.btn-gold:hover {
+    background-color: #e6b800;
+}
+
+.btn-blue {
+    background-color: #0070f3;
+    color: #ffffff;
+}
+
+.btn-blue:hover {
+    background-color: #0056b3;
+}
+
+/* Capital Rules Segment Layout */
+.passing-framework-section {
+    background-color: #12141c;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.framework-banner {
+    background-color: #171a21;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.framework-content h3 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.framework-content p {
+    margin: 0 0 36px 0;
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+.rule-micro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .rule-micro-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.rule-box {
+    position: relative;
+    padding-left: 36px;
+}
+
+.rule-num {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 11px;
+    font-weight: 800;
+    color: #ffcc00;
+    background-color: rgba(255, 204, 0, 0.1);
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rule-box h6 {
+    margin: 0 0 6px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f3f4f6;
+}
+
+.rule-box p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #9ca3af;
+}
