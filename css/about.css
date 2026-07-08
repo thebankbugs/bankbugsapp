@@ -1183,3 +1183,322 @@ tv-ticker-tape {
     padding-bottom: 15px;
 }
 
+/* ==========================================================================
+   BANKBUGS|FX ABOUT ME SECTION - ISOLATED STYLESHEET
+   ========================================================================== */
+
+/* Layout Clearance Wrapper */
+.main-content-clearance {
+    padding-top: 62px !important; /* Forces layout context below dual-row fixed nav layer */
+    background-color: #0f1115;
+    min-height: calc(100vh - 62px);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #f3f4f6;
+}
+
+/* Container Engine */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+/* Two-Column Grid Ecosystem */
+.about-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+@media (max-width: 968px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+/* Left Column Styling */
+.profile-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.profile-image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #171a21;
+    border: 1px solid rgba(255, 255, 250, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.profile-svg-placeholder {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.profile-badge {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background-color: rgba(15, 17, 21, 0.85);
+    border: 1px solid #ffcc00;
+    color: #ffcc00;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+}
+
+.broker-alignment-card {
+    background-color: #171a21;
+    border-left: 3px solid #ffcc00;
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+.alignment-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.alignment-icon {
+    color: #ffcc00;
+    font-size: 16px;
+}
+
+.alignment-header h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #f3f4f6;
+    letter-spacing: 0.5px;
+}
+
+.broker-alignment-card p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #9ca3af;
+}
+
+/* Right Column Dossier Styling */
+.profile-dossier-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.dossier-tag {
+    color: #0070f3;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.dossier-title {
+    margin: 0 0 16px 0;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #f3f4f6;
+}
+
+.dossier-lead {
+    margin: 0 0 24px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #9ca3af;
+}
+
+.bio-narrative p {
+    margin: 0 0 16px 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #9ca3af;
+}
+
+/* Micro Performance Stats Grid */
+.stats-micro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 24px;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffcc00;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Pillars Section & Carousel Ecosystem */
+.pillars-section {
+    background-color: #12141c;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.section-header-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.section-header-inline h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.carousel-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-btn {
+    background-color: #171a21;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #f3f4f6;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.carousel-btn:hover {
+    border-color: #ffcc00;
+    color: #ffcc00;
+}
+
+/* Handled via flexbox width: max-content as specified */
+.carousel-viewport {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    margin-bottom: 48px;
+    scroll-behavior: smooth;
+}
+
+.carousel-viewport::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.pillar-card {
+    background-color: #171a21;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    width: 285px; /* Perfect sizing allocation mapping nicely across viewports */
+    padding: 24px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pillar-icon-wrapper {
+    color: #0070f3;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.pillar-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.pillar-card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #9ca3af;
+}
+
+/* Conversion Trigger Banner Area */
+.about-cta-banner {
+    background: linear-gradient(90deg, #171a21 0%, #12141c 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.cta-text h3 {
+    margin: 0 0 6px 0;
+    font-size: 18px;
+    color: #f3f4f6;
+}
+
+.cta-text p {
+    margin: 0;
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.cta-action-trigger {
+    background-color: #0070f3;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.cta-action-trigger:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .about-cta-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+    }
+    .cta-action-trigger {
+        width: 100%;
+        justify-content: center;
+    }
+}
