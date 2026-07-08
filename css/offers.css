@@ -1375,11 +1375,7 @@ tv-ticker-tape {
 
 .overlay.visible { opacity: 1; pointer-events: auto !important; }
 
-/* Main Content Tracking Blocks */
-.main-layout-container {
-    padding-top: 110px; /* Aligns content correctly below dual header */
-    width: 100%;
-}
+
 
 .offers-hero {
     padding: 40px 8% 20px 8%;
