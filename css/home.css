@@ -874,7 +874,7 @@ tv-ticker-tape {
 /* --- Outer Lock Container & Header Text Styles --- */
 
 .funnel-gatekeeper-section {
-    padding: 90px 8%;
+    padding: 30px 8%;
     background-color: var(--bg-dark);
 }
 
