@@ -111,3 +111,28 @@ if (viewport && slideLeftBtn && slideRightBtn) {
         });
     });
 }
+// --- Hardware-Accelerated 3-Step Funnel Slider Engine ---
+const funnelViewport = document.getElementById('funnel-viewport-track');
+const funnelLeftBtn = document.getElementById('funnel-left-btn');
+const funnelRightBtn = document.getElementById('funnel-right-btn');
+
+if (funnelViewport && funnelLeftBtn && funnelRightBtn) {
+    // Shifts the width dynamically based on the exact size layout configurations of the step cards
+    const stepCardWidth = 450; 
+
+    funnelRightBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        funnelViewport.scrollBy({
+            left: stepCardWidth,
+            behavior: 'smooth'
+        });
+    });
+
+    funnelLeftBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        funnelViewport.scrollBy({
+            left: -stepCardWidth,
+            behavior: 'smooth'
+        });
+    });
+}
