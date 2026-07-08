@@ -552,7 +552,7 @@ tv-ticker-tape {
 .site-footer {
     background-color: #0b0d11; /* Deep charcoal background shade separates footer from content */
     border-top: 1px solid #1a1f2c;
-    padding: 60px 8% 30px 8%;
+    padding: 30px 8% 15px 8%;
     position: relative;
     z-index: 1;
 }
@@ -562,7 +562,7 @@ tv-ticker-tape {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 }
 
 /* Brand Row Styling */
