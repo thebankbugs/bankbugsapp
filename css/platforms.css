@@ -1183,3 +1183,226 @@ tv-ticker-tape {
     padding-bottom: 15px;
 }
 
+
+/* ==========================================================================
+   BANKBUGS|FX TRADING PLATFORMS ENGINE - ISOLATED STYLESHEET
+   ========================================================================== */
+
+/* Layout Clearance Anchor */
+.main-content-clearance {
+    padding-top: 62px !important; /* Perfect pixel layout offset removing navigation gaps */
+    background-color: #0f1115;
+    min-height: calc(100vh - 62px);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #f3f4f6;
+}
+
+.platforms-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+/* Strategic Header Section */
+.platforms-hero-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 56px auto;
+}
+
+.platforms-tag {
+    color: #ffcc00;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 204, 0, 0.05);
+    padding: 6px 14px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 204, 0, 0.1);
+}
+
+.platforms-title {
+    margin: 0 0 16px 0;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #f3f4f6;
+}
+
+.platforms-lead {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #9ca3af;
+}
+
+/* Three-Column Platform Grid Layout */
+.platforms-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+    .platforms-stack-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* Base Card Architecture */
+.platform-card {
+    background-color: #171a21;
+    border-radius: 8px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* Strict Color Accents Framework mapping */
+.execution-accent { border-top: 3px solid #ffcc00; }
+.analysis-accent { border-top: 3px solid #0070f3; }
+.mobile-accent { border-top: 3px solid #f3f4f6; }
+
+/* Structural Sub-tags */
+.platform-role-tag {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+.role-execution { color: #ffcc00; }
+.role-analysis { color: #0070f3; }
+.role-mobile { color: #9ca3af; }
+
+/* Component Identity Design */
+.platform-identity {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.platform-icon-box {
+    width: 44px;
+    height: 44px;
+    background-color: #12141c;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.icon-execution { color: #ffcc00; font-size: 18px; }
+.icon-analysis { color: #0070f3; font-size: 18px; }
+.icon-mobile { color: #f3f4f6; font-size: 18px; }
+
+.platform-identity h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #f3f4f6;
+}
+
+.platform-identity p {
+    margin: 4px 0 0 0;
+    font-size: 11px;
+    color: #9ca3af;
+    line-height: 1.3;
+}
+
+.platform-purpose {
+    margin: 0 0 24px 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #9ca3af;
+    min-height: 68px;
+}
+
+/* Punchy Feature Lists layout */
+.platform-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    padding-top: 20px;
+}
+
+.platform-feature-list li {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #9ca3af;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.platform-feature-list li i {
+    font-size: 12px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.platform-feature-list li .fa-circle-nodes { color: #ffcc00; }
+.platform-feature-list li .fa-wand-magic-sparkles { color: #0070f3; }
+.platform-feature-list li .fa-layer-group { color: #10b981; }
+
+/* Dynamic Button Trigger System */
+.platform-cta-btn {
+    text-decoration: none;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 14px 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: auto; /* Pushes button directly to the bottom line of the container */
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-execution { background-color: #ffcc00; color: #0f1115; }
+.btn-execution:hover { background-color: #e6b800; }
+
+.btn-analysis { background-color: #0070f3; color: #ffffff; }
+.btn-analysis:hover { background-color: #0056b3; }
+
+.btn-mobile { background-color: #12141c; color: #f3f4f6; border: 1px solid rgba(255, 255, 255, 0.08); }
+.btn-mobile:hover { background-color: #171a21; border-color: #ffcc00; color: #ffcc00; }
+
+/* Processing Sync Banner segment */
+.workflow-sync-section {
+    background-color: #12141c;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.sync-banner h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.sync-banner p {
+    margin: 0;
+    font-size: 13px;
+    color: #9ca3af;
+    line-height: 1.5;
+}
+
