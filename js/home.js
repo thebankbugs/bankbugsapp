@@ -86,3 +86,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+// --- Hardware-Accelerated Desktop Slider Engine ---
+const viewport = document.getElementById('inventory-viewport');
+const slideLeftBtn = document.getElementById('slide-left-btn');
+const slideRightBtn = document.getElementById('slide-right-btn');
+
+if (viewport && slideLeftBtn && slideRightBtn) {
+    // Calculates width parameters dynamically (1 card width + 1 gap size spacing parameter)
+    const amountToScroll = 350; 
+
+    slideRightBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        viewport.scrollBy({
+            left: amountToScroll,
+            behavior: 'smooth' // Forces smooth shifting math animation
+        });
+    });
+
+    slideLeftBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        viewport.scrollBy({
+            left: -amountToScroll,
+            behavior: 'smooth'
+        });
+    });
+}
