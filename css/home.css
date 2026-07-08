@@ -406,7 +406,7 @@ tv-ticker-tape {
 
 /* --- Corporate Structure Styling Layout Rules --- */
 .about-corporate-section {
-    padding: 100px 8%;
+    padding: 50px 8%;
     background-color: var(--bg-dark);
     border-top: 1px solid #1a1f2c;
     position: relative;
