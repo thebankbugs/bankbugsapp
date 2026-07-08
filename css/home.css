@@ -870,6 +870,69 @@ tv-ticker-tape {
     }
 }
 
+
+/* --- Outer Lock Container & Header Text Styles --- */
+
+.funnel-gatekeeper-section {
+    padding: 90px 8%;
+    background-color: var(--bg-dark);
+}
+
+.funnel-lock-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #12141c;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 50px 40px;
+    position: relative;
+    text-align: center;
+}
+
+.mandatory-ribbon {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffcc00;
+    color: #0f1115;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 4px 16px;
+    border-radius: 4px;
+}
+
+.funnel-lock-container h2 { 
+    font-size: 28px; 
+    color: white; 
+    margin-bottom: 12px; 
+    font-weight: 700; 
+    margin-top: 10px; 
+}
+
+.funnel-subtitle { 
+    font-size: 15px; 
+    color: var(--text-muted); 
+    line-height: 1.6; 
+    max-width: 650px; 
+    margin: 0 auto 40px auto; 
+}
+
+.funnel-subtitle strong { 
+    color: var(--gold); 
+}
+
+/* Mobile responsive padding constraints */
+@media (max-width: 600px) {
+    .funnel-lock-container {
+        padding: 35px 20px;
+    }
+    .funnel-lock-container h2 {
+        font-size: 24px;
+    }
+}
+
 /* --- Horizontal Onboarding Funnel Slider Layout --- */
 
 .funnel-slider-outer {
