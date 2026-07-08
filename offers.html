@@ -1,0 +1,144 @@
+">
+</head>
+<body class="fade-in">
+
+    <!-- Fixed Combined Top Navbar Layout Layer (Shared across Ecosystem) -->
+    <nav class="navbar">
+        <div class="navbar-top-row">
+            <button id="menu-toggle-btn" class="btn-menu">
+                <i class="fa-solid fa-bars"></i> Dashboard
+            </button>
+
+            <div class="nav-right-actions">
+                <a href="home.html" class="btn btn-visitor">Back to Home</a>
+                <a href="https://pipaffiliates.com" target="_blank" class="btn btn-login">
+                    <i class="fa-solid fa-key"></i> Trader Login
+                </a>
+            </div>
+        </div>
+
+        <!-- Embedded Live Financial Market Ticker Tape Section -->
+        <section class="ticker-section">
+            <script type="module" src="https://tradingview-widget.com" async></script>
+            <tv-ticker-tape 
+                symbols="FX:EURUSD,FX:GBPUSD,FX:USDJPY,FX:AUDUSD,FX:XAUUSD,BITSTAMP:BTCUSD,BINANCE:ETHUSD" 
+                theme="dark" 
+                show-symbol-logo="true" 
+                display-mode="adaptive">
+            </tv-ticker-tape>
+        </section>
+    </nav>
+
+    <!-- Sliding Sidebar Menu Panel (Shared across Ecosystem) -->
+    <div id="sidebar-dashboard" class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo"><i class="fa-solid fa-chart-line text-gold"></i> BankBugs|<span class="gold-text">FX</span></div>
+            <button id="close-sidebar-btn" class="btn-close-sidebar"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="sidebar-scroll-container">
+            <div class="sidebar-group">
+                <span class="sidebar-group-title">The Foundation</span>
+                <ul class="sidebar-links">
+                    <li><a href="home.html#home" class="sidebar-item"><i class="fa-solid fa-house-chimney"></i> Homepage</a></li>
+                    <li><a href="home.html#about" class="sidebar-item"><i class="fa-solid fa-user-tie"></i> About Me</a></li>
+                    <li><a href="home.html#broker" class="sidebar-item"><i class="fa-solid fa-building-columns text-gold"></i> Our Broker</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-group">
+                <span class="sidebar-group-title">Ecosystem & Offers</span>
+                <ul class="sidebar-links">
+                    <li><a href="offers.html" class="sidebar-item"><i class="fa-solid fa-briefcase"></i> Prop Firms</a></li>
+                    <li><a href="offers.html" class="sidebar-item"><i class="fa-solid fa-laptop-code"></i> Trading Platforms</a></li>
+                    <li><a href="offers.html" class="sidebar-item"><i class="fa-solid fa-tags"></i> Your Offers</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar-overlay" class="overlay"></div>
+
+    <!-- UNIQUE CONTENT BODY: Dedicated Premium Offers Panels -->
+    <main class="main-layout-container" id="offers-content">
+        <section class="offers-hero">
+            <div class="offers-hero-inner">
+                <span class="badge-institutional"><i class="fa-solid fa-gift"></i> PREMIUM NETWORK UTILITIES</span>
+                <h1>Exclusive Trading Offers & Free System Capital</h1>
+                <p class="offers-lead">Accelerate your trading node with premium broker allowances, discount passes, and free data configurations sponsored by our network partners.</p>
+            </div>
+        </section>
+
+        <!-- Dynamic Grid: The Active Offers Package -->
+        <section class="active-offers-grid-section">
+            <div class="offers-display-grid">
+                
+                <!-- Package Card 1 -->
+                <div class="offer-package-card highlight-border">
+                    <div class="offer-ribbon-tag">POPULAR</div>
+                    <div class="offer-card-top">
+                        <span class="offer-type">PARTNER BROKER BONUS</span>
+                        <h3>100% Deposit Match Equity</h3>
+                        <p class="offer-price-metric">K0.00 <span class="price-sub">Ecosystem Free Pass</span></p>
+                    </div>
+                    <ul class="offer-features-list">
+                        <li><i class="fa-solid fa-check text-blue"></i> Doubles your active margin equity instantly</li>
+                        <li><!-- [1] --> Fully regulated, high-speed PNG execution servers</li>
+                        <li><i class="fa-solid fa-check text-blue"></i> Raw spreads with secure local banking portals</li>
+                    </ul>
+                    <a href="https://pipaffiliates.com" target="_blank" class="btn-offer-deploy">Claim Broker Offer <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+
+                <!-- Package Card 2 -->
+                <div class="offer-package-card">
+                    <div class="offer-card-top">
+                        <span class="offer-type">PROP FIRM ALLOWANCE</span>
+                        <h3>Evaluation Discount Challenges</h3>
+                        <p class="offer-price-metric">Up to 15% OFF <span class="price-sub">Partner Voucher</span></p>
+                    </div>
+                    <ul class="offer-features-list">
+                        <li><i class="fa-solid fa-check text-blue"></i> Slashes entries to top institutional funds</li>
+                        <li><i class="fa-solid fa-check text-blue"></i> Bypasses strict retail hidden capital rules</li>
+                        <li><i class="fa-solid fa-check text-blue"></i> Full payout configurations whitelisted</li>
+                    </ul>
+                    <a href="home.html#broker" class="btn-offer-deploy secondary-offer-btn">Get Verification Code</a>
+                </div>
+
+                <!-- Package Card 3 -->
+                <div class="offer-package-card">
+                    <div class="offer-card-top">
+                        <span class="offer-type">BANKBUGS PRO INFRASTRUCTURE</span>
+                        <h3>Full Data System Activation</h3>
+                        <p class="offer-price-metric">Lifetime Access <span class="price-sub">Locked Behind Step 3</span></p>
+                    </div>
+                    <ul class="offer-features-list">
+                        <li><i class="fa-solid fa-check text-blue"></i> Complete MT5 Institutional Layout Profiles</li>
+                        <li><i class="fa-solid fa-check text-blue"></i> Unlocks Backtested Liquidity Entry Data</li>
+                        <li><i class="fa-solid fa-check text-blue"></i> 24/7 Access to Private WhatsApp Signals Desk</li>
+                    </ul>
+                    <a href="home.html#broker" class="btn-offer-deploy secondary-offer-btn">Unlock via Step 3</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Institutional Footer & Regulatory Risk Disclaimer (Shared across Ecosystem) -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand-row">
+                <div class="footer-logo"><i class="fa-solid fa-chart-line text-gold"></i> BankBugs|<span class="gold-text">FX</span></div>
+                <p class="footer-tagline">Institutional Execution Frameworks & Local Strategic Partnership.</p>
+            </div>
+            <div class="footer-disclaimer-box">
+                <h4><i class="fa-solid fa-triangle-exclamation text-gold"></i> Regulatory Compliance & Risk Disclaimer</h4>
+                <p><strong>High-Risk Investment Warning:</strong> Trading carries substantial risk of asset loss and is not appropriate for all PNG investors. All shared models, calculators, and system strategies are structured strictly for educational purposes.</p>
+                <p><strong>Affiliate Partnership Notice:</strong> BankBugs|FX functions as an active introducing entity. All resources are kept K0.00 free because our underlying corporate partners distribute volume rebate allocations to our desk.</p>
+            </div>
+            <div class="footer-copyright-bar">
+                <p>&copy; 2026 BankBugs|FX. All Rights Reserved. Built for the Papua New Guinea Trading Network.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shared Logic Controller -->
+    <script src="js/home.js"></script>
+</body>
+</html>
