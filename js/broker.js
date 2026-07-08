@@ -136,3 +136,17 @@ if (funnelViewport && funnelLeftBtn && funnelRightBtn) {
         });
     });
 }
+
+/**
+ * BankBugs|FX - Broker Component Controller
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    const actionBtn = document.querySelector('.broker-action-btn');
+
+    if (actionBtn) {
+        actionBtn.addEventListener('click', (e) => {
+            // Optional: Insert custom analytics event payload logging points here
+            console.log('Outbound execution channel route initialized safely.');
+        });
+    }
+});
