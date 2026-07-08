@@ -136,3 +136,17 @@ if (funnelViewport && funnelLeftBtn && funnelRightBtn) {
         });
     });
 }
+
+/**
+ * BankBugs|FX - Prop Firm Allocation Module Controller
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    const actionButtons = document.querySelectorAll('.firm-action-btn');
+
+    actionButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Optional telemetry or cookie check logic goes here
+            console.log('Scaling pipeline external redirection active.');
+        });
+    });
+});
