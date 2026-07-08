@@ -634,10 +634,6 @@ tv-ticker-tape {
 }
 /* --- Corporate Ecosystem Body Layout Rules --- */
 
-.main-layout-container {
-    padding-top: 62px; /* Gives perfect clearance below your pinned navbar and ticker tape layer */
-    width: 100%;
-}
 
 /* Authentic Hero Structure */
 .hero-ecosystem {
