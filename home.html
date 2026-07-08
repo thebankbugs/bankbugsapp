@@ -123,90 +123,98 @@
         </div>
     </header>
 
-   <!-- Section 2: Transparent Asset Ecosystem Sliding Carousel -->
+   <!-- Section 2: Transparent Asset Ecosystem Sliding Carousel with Manual Controls -->
 <section class="ecosystem-inventory" id="tools">
     <div class="section-header-centered">
         <h2>The Infrastructure Architecture</h2>
-        <p>Swipe or drag horizontally to view the exact structural data, tools, and resource inventory you unlock inside our network with zero financial barriers:</p>
+        <p>Use the interface navigation buttons or swipe horizontally to view the structural data, tools, and resource inventory you unlock inside our network:</p>
     </div>
 
-    <!-- Horizontal Sliding Layout Track Container -->
-    <div class="carousel-viewport">
-        <div class="carousel-track">
-            
-            <!-- Box 1 -->
-            <div class="inventory-card">
-                <div class="card-header-row">
-                    <i class="fa-solid fa-shield-halved inventory-icon text-gold"></i>
-                    <h3>Verified Partner Brokers</h3>
+    <!-- Outer Viewport Masking Container -->
+    <div class="carousel-container-outer">
+        <div class="carousel-viewport" id="inventory-viewport">
+            <div class="carousel-track">
+                
+                <!-- Box 1 -->
+                <div class="inventory-card">
+                    <div class="card-header-row">
+                        <i class="fa-solid fa-shield-halved inventory-icon text-gold"></i>
+                        <h3>Verified Partner Brokers</h3>
+                    </div>
+                    <div class="card-image-box">
+                        <img src="img/brokers.jpg" alt="Regulated Forex Brokers Architecture" class="card-display-img">
+                    </div>
+                    <p>The absolute most reliable, regulated, and optimized brokers for local PNG traders with secure deposit and withdrawal pathways.</p>
                 </div>
-                <div class="card-image-box">
-                    <!-- Point this to your img folder asset, e.g., img/brokers.jpg -->
-                    <img src="img/brokers.jpg" alt="Regulated Forex Brokers Architecture" class="card-display-img">
-                </div>
-                <p>The absolute most reliable, regulated, and optimized brokers for local PNG traders with secure deposit and withdrawal pathways.</p>
-            </div>
 
-            <!-- Box 2 -->
-            <div class="inventory-card">
-                <div class="card-header-row">
-                    <i class="fa-solid fa-briefcase inventory-icon"></i>
-                    <h3>Prop Firm Navigation</h3>
+                <!-- Box 2 -->
+                <div class="inventory-card">
+                    <div class="card-header-row">
+                        <i class="fa-solid fa-briefcase inventory-icon"></i>
+                        <h3>Prop Firm Navigation</h3>
+                    </div>
+                    <div class="card-image-box">
+                        <img src="img/propfirms.jpg" alt="Institutional Prop Firm Scaling" class="card-display-img">
+                    </div>
+                    <p>Institutional funding setups and validation strategies to scale your trading size using corporate capital pools.</p>
                 </div>
-                <div class="card-image-box">
-                    <img src="img/propfirms.jpg" alt="Institutional Prop Firm Scaling" class="card-display-img">
-                </div>
-                <p>Institutional funding setups and validation strategies to scale your trading size using corporate capital pools.</p>
-            </div>
 
-            <!-- Box 3 -->
-            <div class="inventory-card">
-                <div class="card-header-row">
-                    <i class="fa-solid fa-screwdriver-wrench inventory-icon"></i>
-                    <h3>Trading Platforms & Tools</h3>
+                <!-- Box 3 -->
+                <div class="inventory-card">
+                    <div class="card-header-row">
+                        <i class="fa-solid fa-screwdriver-wrench inventory-icon"></i>
+                        <h3>Trading Platforms & Tools</h3>
+                    </div>
+                    <div class="card-image-box">
+                        <img src="img/platforms.jpg" alt="Trading Terminal Layouts" class="card-display-img">
+                    </div>
+                    <p>Complete layout configurations for MT5 and critical proprietary calculators to keep your risk execution seamless.</p>
                 </div>
-                <div class="card-image-box">
-                    <img src="img/platforms.jpg" alt="Trading Terminal Layouts" class="card-display-img">
-                </div>
-                <p>Complete layout configurations for MT5 and critical proprietary calculators to keep your risk execution seamless.</p>
-            </div>
 
-            <!-- Box 4 -->
-            <div class="inventory-card">
-                <div class="card-header-row">
-                    <i class="fa-solid fa-network-wired inventory-icon text-gold"></i>
-                    <h3>My Personal Systems</h3>
+                <!-- Box 4 -->
+                <div class="inventory-card">
+                    <div class="card-header-row">
+                        <i class="fa-solid fa-network-wired inventory-icon text-gold"></i>
+                        <h3>My Personal Systems</h3>
+                    </div>
+                    <div class="card-image-box">
+                        <img src="img/systems.jpg" alt="Institutional Liquidity Models" class="card-display-img">
+                    </div>
+                    <p>Direct exposure to the exact liquidity strategies, session models, and entry criteria I run daily.</p>
                 </div>
-                <div class="card-image-box">
-                    <img src="img/systems.jpg" alt="Institutional Liquidity Models" class="card-display-img">
-                </div>
-                <p>Direct exposure to the exact liquidity strategies, session models, and entry criteria I run daily.</p>
-            </div>
 
-            <!-- Box 5 -->
-            <div class="inventory-card">
-                <div class="card-header-row">
-                    <i class="fa-solid fa-scale-balanced inventory-icon"></i>
-                    <h3>Risk & Execution Models</h3>
+                <!-- Box 5 -->
+                <div class="inventory-card">
+                    <div class="card-header-row">
+                        <i class="fa-solid fa-scale-balanced inventory-icon"></i>
+                        <h3>Risk & Execution Models</h3>
+                    </div>
+                    <div class="card-image-box">
+                        <img src="img/risk.jpg" alt="Risk Management Strategy" class="card-display-img">
+                    </div>
+                    <p>Professional money management rules that prioritize account survival over emotional guesswork.</p>
                 </div>
-                <div class="card-image-box">
-                    <img src="img/risk.jpg" alt="Risk Management Strategy" class="card-display-img">
-                </div>
-                <p>Professional money management rules that prioritize account survival over emotional guesswork.</p>
-            </div>
 
-            <!-- Box 6 -->
-            <div class="inventory-card">
-                <div class="card-header-row">
-                    <i class="fa-solid fa-video inventory-icon"></i>
-                    <h3>Curated YouTube Pathways</h3>
+                <!-- Box 6 -->
+                <div class="inventory-card">
+                    <div class="card-header-row">
+                        <i class="fa-solid fa-video inventory-icon"></i>
+                        <h3>Curated YouTube Pathways</h3>
+                    </div>
+                    <div class="card-image-box">
+                        <img src="img/youtube.jpg" alt="Curated Educational Learning Tracks" class="card-display-img">
+                    </div>
+                    <p>Detailed, cut-the-noise course recommendations on YouTube. I tell you exactly where, how, and what to look for to save time.</p>
                 </div>
-                <div class="card-image-box">
-                    <img src="img/youtube.jpg" alt="Curated Educational Learning Tracks" class="card-display-img">
-                </div>
-                <p>Detailed, cut-the-noise course recommendations on YouTube. I tell you exactly where, how, and what to look for to save time.</p>
-            </div>
 
+            </div>
+        </div>
+
+        <!-- NEW: Manual Institutional Interface Control Buttons -->
+        <div class="carousel-control-row">
+            <button class="btn-carousel-ctrl" id="slide-left-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <span class="carousel-indicator-bar">EXPLORE ECOSYSTEM DATA</span>
+            <button class="btn-carousel-ctrl" id="slide-right-btn"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
     </div>
 
@@ -218,6 +226,7 @@
         </div>
     </div>
 </section>
+
 
     <!-- Section 3: The 3-Step Verification Gatekeeper Funnel -->
     <section class="funnel-gatekeeper-section" id="broker">
