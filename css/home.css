@@ -870,82 +870,94 @@ tv-ticker-tape {
     }
 }
 
-/* 3-Step Funnel Section */
-.funnel-gatekeeper-section {
-    padding: 90px 8%;
-    background-color: var(--bg-dark);
-}
+/* --- Horizontal Onboarding Funnel Slider Layout --- */
 
-.funnel-lock-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #12141c;
-    border: 1px solid #222;
-    border-radius: 12px;
-    padding: 50px 40px;
+.funnel-slider-outer {
+    width: 100%;
     position: relative;
-    text-align: center;
+    margin-top: 30px;
 }
 
-.mandatory-ribbon {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #ffcc00;
-    color: #0f1115;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    padding: 4px 16px;
-    border-radius: 4px;
+.funnel-viewport {
+    width: 100%;
+    overflow-x: scroll; /* Ensures fluid tracking swiping rules on touch screens */
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 10px 0;
 }
 
-.funnel-lock-container h2 { font-size: 28px; color: white; margin-bottom: 12px; font-weight: 700; margin-top: 10px; }
-.funnel-subtitle { font-size: 15px; color: var(--text-muted); line-height: 1.6; max-width: 650px; margin: 0 auto 40px auto; }
-.funnel-subtitle strong { color: var(--gold); }
+.funnel-viewport::-webkit-scrollbar {
+    display: none;
+}
 
-/* Vertically Stacked Steps */
-.funnel-steps-stack {
+.funnel-track {
+    display: flex;
+    gap: 20px;
+    width: max-content; /* Spreads layout out horizontally */
+    flex-wrap: nowrap;
+}
+
+/* Upgraded Full-Width Dynamic Funnel Step Node */
+.funnel-step-node {
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid #1c202a;
+    padding: 30px;
+    border-radius: 10px;
+    
+    /* Dynamic width footprint keeps steps perfectly scaled based on the viewport space */
+    width: 720px; 
+    max-width: 85vw; /* Keeps layout completely fluid on mobile monitors */
     display: flex;
     flex-direction: column;
-    gap: 25px;
     text-align: left;
+    flex-shrink: 0;
 }
 
-.funnel-step-node {
+.node-top-header {
     display: flex;
-    gap: 25px;
-    background-color: rgba(255,255,255,0.01);
-    border: 1px solid #1c202a;
-    padding: 25px;
-    border-radius: 8px;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #1c202a;
+    padding-bottom: 15px;
 }
 
 .node-number {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 800;
-    color: rgba(255, 204, 0, 0.2);
+    color: var(--gold);
     line-height: 1;
 }
 
-.node-body h5 { font-size: 16px; color: white; margin-bottom: 6px; font-weight: 600; }
-.node-body p { font-size: 14px; color: var(--text-muted); line-height: 1.5; margin-bottom: 15px; }
+.node-body h5 {
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+}
 
-/* Micro Action Handles */
+.funnel-step-node p {
+    font-size: 14.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Micro Interactivity CTA anchors inside the slider nodes */
 .node-action-btn, .node-whatsapp-btn {
+    align-self: flex-start; /* Keeps the buttons clean and left-aligned */
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 16px;
+    padding: 10px 20px;
     background-color: rgba(255, 204, 0, 0.08);
     border: 1px solid rgba(255, 204, 0, 0.2);
     color: var(--gold);
-    border-radius: 4px;
-    font-size: 13px;
+    border-radius: 6px;
+    font-size: 13.5px;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .node-action-btn:hover { background-color: var(--gold); color: #000; }
@@ -957,6 +969,41 @@ tv-ticker-tape {
 }
 
 .node-whatsapp-btn:hover { background-color: #25d366; color: #000; }
+
+/* Control Action Text Bars at base */
+.funnel-control-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.btn-funnel-ctrl {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s ease;
+}
+
+.btn-funnel-ctrl:hover {
+    color: var(--gold);
+}
+
+/* Mobile Layout Sizing Tweaks */
+@media (max-width: 600px) {
+    .funnel-step-node {
+        padding: 20px;
+    }
+    .node-top-header { gap: 10px; padding-bottom: 10px; }
+    .node-number { font-size: 26px; }
+}
 
 /* Socials Link Matrix Section */
 .socials-index-section {
