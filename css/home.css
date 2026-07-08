@@ -683,7 +683,7 @@ tv-ticker-tape {
     background-color: #12151d;
     border: 1px solid #1f2431;
     border-left: 4px solid var(--gold);
-    padding: 24px;
+    padding: 12px;
     border-radius: 0 8px 8px 0;
     text-align: left;
     margin-bottom: 40px;
@@ -735,7 +735,7 @@ tv-ticker-tape {
 
 /* Structural Inventory Section */
 .ecosystem-inventory {
-    padding: 40px 8%;
+    padding: 15px 8%;
     background-color: #0c0e12;
     border-top: 1px solid #1a1f2c;
     text-align: center;
