@@ -772,11 +772,17 @@ tv-ticker-tape {
 }
 
 /* Flex layout strip holding all 6 cards side-by-side */
+/* --- Desktop Carousel Track Flex Expansion Patch --- */
 .carousel-track {
     display: flex;
     gap: 24px;
-    width: max-content; /* Forces content boundaries to expand infinitely to the right */
+    
+    /* CRITICAL FIXES FOR DESKTOP BROWSERS: */
+    width: max-content !important;    /* Prevents desktop engines from cutting the width at screen edge */
+    min-width: 100% !important;      /* Forces proper boundary box calculation on widescreen monitors */
+    flex-wrap: nowrap !important;    /* Absolute barrier keeping all 6 cards straight in a single row */
 }
+
 
 /* Premium Uniform Carousel Card Node Geometry */
 .inventory-card {
