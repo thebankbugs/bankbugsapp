@@ -1,182 +1,1184 @@
-/* ==========================================================================
-   OFFERS PAGE SPECIFIC BODY CONTENT LAYOUT
-   ========================================================================== */
-
-.offers-hero {
-    padding: 40px 8% 20px 8%;
-    text-align: center;
-    background: radial-gradient(circle at top, #141a29 0%, var(--bg-dark) 90%);
+/* Styling Theme Base Rules & Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-.offers-hero-inner {
-    max-width: 800px;
-    margin: 0 auto;
+:root {
+    --bg-dark: #0f1115;
+    --card-bg: #171a21;
+    --gold: #ffcc00;
+    --action-blue: #0070f3;
+    --text-light: #f3f4f6;
+    --text-muted: #9ca3af;
+    --sidebar-width: 280px;
 }
 
-.offers-hero h1 {
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 1.3;
-    margin: 20px 0 12px 0;
-    color: white;
-}
-
-.offers-lead {
-    font-size: 16px;
-    color: var(--text-muted);
-    line-height: 1.6;
-}
-
-/* Pricing / Allowances Matrix Display Section */
-.active-offers-grid-section {
-    padding: 40px 8% 80px 8%;
+body {
     background-color: var(--bg-dark);
-}
-
-.offers-display-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    gap: 30px;
-    max-width: 1050px;
-    margin: 0 auto;
-}
-
-/* Premium Offer Package Container node elements */
-.offer-package-card {
-    background-color: var(--card-bg);
-    border: 1px solid #1c202a;
-    border-radius: 12px;
-    padding: 40px 30px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.offer-package-card:hover {
-    transform: translateY(-4px);
-    border-color: #262c3a;
-}
-
-/* Strategic Gold Highlight Border override for high conversion tracking */
-.highlight-border {
-    border: 2px solid var(--gold) !important;
-    box-shadow: 0 4px 20px rgba(255, 204, 0, 0.05);
-}
-
-.offer-ribbon-tag {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: var(--gold);
-    color: var(--bg-dark);
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    padding: 3px 10px;
-    border-radius: 4px;
-}
-
-/* Header Text Layer Inside the Cards */
-.offer-card-top {
-    border-bottom: 1px solid #1c202a;
-    padding-bottom: 25px;
-    margin-bottom: 25px;
-}
-
-.offer-type {
-    display: block;
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--action-blue);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-}
-
-.offer-package-card h3 {
-    font-size: 20px;
-    color: white;
-    font-weight: 600;
-    margin-bottom: 12px;
-}
-
-.offer-price-metric {
-    font-size: 32px;
-    font-weight: 800;
-    color: white;
-    line-height: 1;
-}
-
-.price-sub {
-    display: block;
-    font-size: 13px;
-    color: var(--text-muted);
-    font-weight: 500;
-    margin-top: 6px;
-}
-
-/* Inside Checklist Item Styles */
-.offer-features-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 40px;
-}
-
-.offer-features-list li {
-    font-size: 14px;
     color: var(--text-light);
-    line-height: 1.5;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    opacity: 0;
+}
+
+.fade-in {
+    animation: pageLoad 0.6s ease-out forwards;
+}
+
+@keyframes pageLoad {
+    to { opacity: 1; }
+}
+
+/* Fixed Header Navbar Setup Layout */
+.navbar {
     display: flex;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.offer-features-list li i {
-    font-size: 14px;
-    margin-top: 2px;
-    flex-shrink: 0;
-}
-
-/* Primary Direct Conversion Buttons */
-.btn-offer-deploy {
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #12141c;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 14px;
-    text-align: center;
+    z-index: 9999 !important;
+    border-bottom: 1px solid #222;
+    pointer-events: auto !important;
+}
+
+/* Clickable Menu Trigger Controller UI Element */
+.btn-menu {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid #333;
+    color: var(--text-light);
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 15px;
+    position: relative;
+    z-index: 10000 !important;
+    pointer-events: auto !important;
+}
+
+.btn-menu:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.nav-right-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn-visitor {
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+.btn-visitor:hover { color: white; }
+
+/* --- Glowing Premium Trader Login Button Layout --- */
+.btn-login {
     background-color: var(--gold);
     color: var(--bg-dark);
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
+    padding: 10px 20px;
     border-radius: 6px;
-    display: inline-flex;
+    position: relative;
+    z-index: 1000001 !important; 
+    pointer-events: auto !important; 
+    cursor: pointer !important;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    
+    /* Adds the steady pulsing gold glow effect */
+    animation: goldGlowPulse 2s infinite alternate;
+}
+
+/* Hover Interactivity Overrides for Desktop Mice */
+.btn-login:hover {
+    transform: translateY(-2px);
+    background-color: #fff; /* Shifts slightly to white for a high-value look */
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.8), 0 0 40px rgba(255, 204, 0, 0.4);
+}
+
+/* Click Action Press Effect */
+.btn-login:active {
+    transform: translateY(0);
+}
+
+/* The Glow Engine Calculation Matrix */
+@keyframes goldGlowPulse {
+    0% {
+        box-shadow: 0 0 8px rgba(255, 204, 0, 0.4), 0 0 15px rgba(255, 204, 0, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 18px rgba(255, 204, 0, 0.7), 0 0 30px rgba(255, 204, 0, 0.4);
+    }
+}
+
+
+/* Sliding Overlaid Dashboard Sidebar Frame */
+/* --- Sidebar Scroll Overlap Patch --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: calc(-1 * var(--sidebar-width));
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: #12141c;
+    border-right: 1px solid #222;
+    z-index: 999999 !important; /* Stays clean on top of layers */
+    transition: left 0.3s ease-in-out;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+
+    /* CRITICAL FIX: Enables smooth scrolling inside the menu if items overflow the screen */
+    overflow-y: auto !important; 
+}
+
+/* Optional: Make the sidebar scrollbar sleek and minimalist */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #12141c;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: var(--card-bg);
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
+}
+
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-top: auto; /* Forces action button to lock seamlessly to the card base */
-    transition: background-color 0.2s;
+    margin-bottom: 40px;
 }
 
-.btn-offer-deploy:hover {
-    background-color: #e5b800;
+.sidebar-logo { font-size: 18px; font-weight: 800; }
+.gold-text, .text-gold { color: var(--gold); }
+
+.btn-close-sidebar {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 20px;
+    cursor: pointer;
 }
 
-.secondary-offer-btn {
+.btn-close-sidebar:hover { color: white; }
+.sidebar-links { list-style: none; display: flex; flex-direction: column; gap: 15px; }
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 15px;
+    border-radius: 8px;
+}
+
+.sidebar-item i { font-size: 18px; width: 24px; }
+.sidebar-item:hover { background-color: rgba(255, 255, 255, 0.03); color: var(--gold); }
+
+/* --- Tighten Sidebar Menu Spacing --- */
+
+/* 1. Reduce the gap between the list items */
+.sidebar-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px !important; /* Changed from 15px to 6px for tighter layout vertical stacking */
+}
+
+/* 2. Reduce the inside vertical padding of each item link click box */
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 15px; /* Slightly lowered font size to look cleaner in tight layouts */
+    font-weight: 500;
+    
+    /* CRITICAL SPACING TWEAK: Changes top/bottom to 6px and left/right to 12px */
+    padding: 6px 12px !important; 
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+
+/* Dimmed Overlay Background Styling */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99998 !important;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Locate this rule in your css/home.css and change the first padding digit */
+.hero {
+    padding: 120px 8% 80px 8%; /* Adjusts the text layout distance from your ticker tape */
+    text-align: center;
+    background: radial-gradient(circle at top, #1e2638 0%, var(--bg-dark) 70%);
+    position: relative;
+    z-index: 1;
+}
+
+
+.badge {
+    background-color: rgba(255, 204, 0, 0.1);
+    color: var(--gold);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero h1 { font-size: 46px; font-weight: 800; line-height: 1.2; margin: 20px 0; }
+.hero p { max-width: 700px; margin: 0 auto 40px auto; font-size: 17px; color: var(--text-muted); line-height: 1.6; }
+
+.btn { display: inline-block; padding: 14px 28px; border-radius: 6px; font-weight: 600; text-decoration: none; cursor: pointer; border: none; }
+.btn-primary { background-color: var(--action-blue); color: white; }
+.btn-secondary { background-color: rgba(255, 255, 255, 0.05); color: var(--text-light); border: 1px solid rgba(255, 255, 255, 0.1); margin-left: 15px; }
+
+.features { padding: 80px 8%; text-align: center; }
+.features h2 { font-size: 32px; margin-bottom: 50px; }
+.grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+.card { background-color: var(--card-bg); padding: 40px 30px; border-radius: 12px; border: 1px solid #222; text-align: left; }
+.card-icon { font-size: 32px; color: var(--action-blue); margin-bottom: 20px; display: block; }
+.card h3 { margin-bottom: 12px; font-size: 20px; }
+.card p { color: var(--text-muted); line-height: 1.5; }
+
+.broker-section { padding: 60px 8% 100px 8%; }
+.broker-card { max-width: 800px; margin: 0 auto; background-color: var(--card-bg); border: 2px solid var(--gold); border-radius: 16px; padding: 50px 40px; text-align: center; position: relative; }
+.broker-badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background-color: var(--gold); color: var(--bg-dark); font-weight: 800; font-size: 12px; padding: 5px 15px; border-radius: 4px; }
+.broker-subtitle { color: var(--text-muted); margin-top: 15px; margin-bottom: 40px; }
+.steps-container { text-align: left; max-width: 600px; margin: 0 auto 40px auto; }
+.step-item { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
+.step-num { background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+.btn-broker-cta { width: 100%; max-width: 550px; background-color: var(--gold); color: var(--bg-dark); font-size: 18px; margin-bottom: 15px; }
+.btn-claim-cta { width: 100%; max-width: 550px; background-color: transparent; border: 1px dashed var(--text-muted); color: var(--text-muted); font-size: 16px; }
+
+/* --- Live TradingView Ticker Tape Layout Placement --- */
+.ticker-section {
+    width: 100%;
+    margin-top: 60px; /* Positions the ticker right below your navbar layer */
+    background-color: #12141c;
+    border-bottom: 1px solid #222;
+    position: relative;
+    z-index: 10;
+    min-height: 46px; /* Guarantees the canvas container doesn't collapse to 0px */
+}
+
+/* Force the TradingView web component to fill the background space fully */
+tv-ticker-tape {
+    width: 100%;
+    display: block;
+}
+
+/* --- High-Compression Categorized Sidebar Layout Rules --- */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: calc(-1 * var(--sidebar-width));
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: #12141c;
+    border-right: 1px solid #222;
+    z-index: 999999 !important;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 25px 15px; /* Tighter perimeter cushion padding */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Independent Scroll Engine Block */
+.sidebar-scroll-container {
+    flex-grow: 1;
+    overflow-y: auto !important; /* Enables scroll mechanism inside your sidebar layout frame */
+    padding-right: 4px;
+}
+
+/* Institutional Category Header Design labels */
+.sidebar-group {
+    margin-bottom: 14px; /* Space between each category row pack */
+}
+
+.sidebar-group-title {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+    padding-left: 10px;
+    opacity: 0.6; /* Keeps titles clean and subordinate to active links */
+}
+
+/* Compressed Stacking Rules */
+.sidebar-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px !important; /* Very small spacing gap between individual dashboard button nodes */
+}
+
+/* Corporate Link Layout Design nodes */
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 14px; /* Compact reading layout size */
+    font-weight: 500;
+    padding: 6px 10px !important; /* Compressed inner height padding */
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+/* Uniform Icon Width System Alignment Grid */
+.sidebar-item i {
+    font-size: 15px;
+    width: 20px; /* Fixed anchor grid prevents uneven text shifting */
+    text-align: center;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+/* Hover highlights for active selection status tracking */
+.sidebar-item:hover {
     background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid #2b3142;
     color: white;
 }
 
-.secondary-offer-btn:hover {
-    background-color: rgba(255, 255, 255, 0.08);
+.sidebar-item:hover i {
+    color: var(--gold); /* Icons switch to premium branding gold on focus hover */
+}
+
+/* Custom Scrollbar Presentation styling rules for sleek UI */
+.sidebar-scroll-container::-webkit-scrollbar { width: 4px; }
+.sidebar-scroll-container::-webkit-scrollbar-track { background: transparent; }
+.sidebar-scroll-container::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.05); border-radius: 10px; }
+.sidebar-scroll-container::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* --- Corporate Structure Styling Layout Rules --- */
+.about-corporate-section {
+    padding: 50px 8%;
+    background-color: var(--bg-dark);
+    border-top: 1px solid #1a1f2c;
+    position: relative;
+    z-index: 1;
+}
+
+.corporate-container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.corporate-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.corporate-header h2 {
+    font-size: 34px;
+    font-weight: 700;
+    margin: 20px 0 15px 0;
+    color: white;
+}
+
+.corporate-header p {
+    font-size: 16px;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Twin Grid System for Mission and Vision */
+.corporate-twin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.corp-card {
+    background: #13161f;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 35px;
+    text-align: left;
+}
+
+.corp-icon-box {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.corp-card h3 {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.corp-card p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Values Grid Section */
+.values-wrapper, .objectives-wrapper {
+    background: #13161f;
+    border: 1px solid #222;
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.values-wrapper h3, .objectives-wrapper h3 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 30px;
+    font-weight: 600;
+    border-bottom: 1px solid #222;
+    padding-bottom: 15px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.value-item h4 {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.value-item h4 i {
+    margin-right: 6px;
+}
+
+.value-item p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Objectives List styling node elements */
+.objectives-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.objectives-list li {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    border-left: 2px solid #222;
+    padding-left: 20px;
+    transition: border-color 0.2s ease;
+}
+
+.objectives-list li:hover {
     border-color: var(--gold);
 }
 
-/* Mobile Responsive layout conversions */
-@media (max-width: 600px) {
-    .offers-hero h1 { font-size: 28px; }
-    .offer-package-card { padding: 30px 20px; }
-    .offer-price-metric { font-size: 26px; }
+.objectives-list strong {
+    color: white;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 16px;
 }
+
+/* Responsive Mobile Rules */
+@media (max-width: 600px) {
+    .corporate-header h2 { font-size: 26px; }
+    .values-wrapper, .objectives-wrapper { padding: 25px; }
+}
+
+/* --- Institutional Disclaimer Footer Layout Rules --- */
+.site-footer {
+    background-color: #0b0d11; /* Deep charcoal background shade separates footer from content */
+    border-top: 1px solid #1a1f2c;
+    padding: 30px 8% 15px 8%;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-container {
+    max-width: 950px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Brand Row Styling */
+.footer-brand-row {
+    text-align: left;
+}
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.footer-tagline {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* Legal Box Panel Geometry */
+.footer-disclaimer-box {
+    background-color: rgba(23, 26, 33, 0.4);
+    border: 1px solid #1f2430;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: left;
+}
+
+.footer-disclaimer-box h4 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-disclaimer-box p {
+    font-size: 12px; /* Small, compliant regulatory font sizing */
+    color: #717a8c; /* Muted tone keeps the text readable but secondary */
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.footer-disclaimer-box p:last-of-type {
+    margin-bottom: 0;
+}
+
+.footer-disclaimer-box strong {
+    color: var(--text-muted);
+}
+
+/* Base Copyright strip */
+.footer-copyright-bar {
+    text-align: center;
+    border-top: 1px solid #1a1f2c;
+    padding-top: 25px;
+    font-size: 12px;
+    color: #4a5264;
+}
+
+/* Mobile Responsiveness adjustments */
+@media (max-width: 600px) {
+    .site-footer { padding: 40px 5% 20px 5%; }
+    .footer-disclaimer-box { padding: 15px; }
+}
+/* --- Corporate Ecosystem Body Layout Rules --- */
+
+
+/* Authentic Hero Structure */
+.hero-ecosystem {
+    padding: 25px 8% 40px 8%;
+    background: radial-gradient(circle at top, #141923 0%, var(--bg-dark) 90%);
+    text-align: center;
+}
+
+.hero-inner {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.badge-institutional {
+    background-color: rgba(255, 204, 0, 0.08);
+    border: 1px solid rgba(255, 204, 0, 0.2);
+    color: var(--gold);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-ecosystem h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 25px 0 15px 0;
+    color: white;
+}
+
+.hero-lead-text {
+    font-size: 18px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 720px;
+    margin: 0 auto 30px auto;
+}
+
+/* Strategic Mission Statement Box */
+.hero-core-statement {
+    background-color: #12151d;
+    border: 1px solid #1f2431;
+    border-left: 4px solid var(--gold);
+    padding: 12px;
+    border-radius: 0 8px 8px 0;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.hero-core-statement p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+.hero-core-statement strong { color: white; }
+
+/* Dual Action Rows */
+.gateway-action-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-primary-glowing {
+    background-color: var(--action-blue);
+    color: white;
+    padding: 14px 28px;
+    font-weight: 700;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s;
+    font-size: 15px;
+    box-shadow: 0 4px 15px rgba(0, 112, 243, 0.3);
+}
+
+.btn-primary-glowing:hover { background-color: #005ecf; }
+
+.btn-secondary-glowing {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid #333;
+    color: white;
+    padding: 14px 28px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 15px;
+}
+
+.btn-secondary-glowing:hover { background-color: rgba(255, 255, 255, 0.08); border-color: var(--gold); }
+
+/* Structural Inventory Section */
+.ecosystem-inventory {
+    padding: 15px 8%;
+    background-color: #0c0e12;
+    border-top: 1px solid #1a1f2c;
+    text-align: center;
+}
+
+.section-header-centered h2 { font-size: 30px; color: white; margin-bottom: 12px; font-weight: 700; }
+.section-header-centered p { font-size: 16px; color: var(--text-muted); max-width: 600px; margin: 0 auto 50px auto; line-height: 1.6; }
+
+/* --- Horizontal Sliding Infrastructure Carousel UI --- */
+
+/* --- High-Performance Horizontal Manual Slider Layout --- */
+
+.ecosystem-inventory {
+    padding: 15px 0;
+    background-color: #0c0e12;
+    border-top: 1px solid #1a1f2c;
+    text-align: center;
+}
+
+.carousel-container-outer {
+    width: 100%;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel-viewport {
+    width: 100%;
+    overflow-x: scroll; /* Forces scroll capabilities across all browser types */
+    padding: 10px 8%;
+    scroll-behavior: smooth; /* Animates the slide transition softly */
+    scrollbar-width: none; /* Removes layout tracks on Firefox */
+}
+
+.carousel-viewport::-webkit-scrollbar {
+    display: none; /* Removes layout tracks on Chrome/Safari/Edge */
+}
+
+.carousel-track {
+    display: flex;
+    gap: 12px;
+    width: max-content; /* Guarantees layout track is endlessly wide to hold items side-by-side */
+    flex-wrap: nowrap;
+}
+
+/* Premium Card Geometries */
+.inventory-card {
+    background-color: var(--card-bg);
+    border: 1px solid #1c202a;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: left;
+    width: 325px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.card-header-row { display: flex; align-items: center; gap: 12px; }
+.inventory-icon { font-size: 22px; color: var(--action-blue); }
+.inventory-card h3 { font-size: 17px; color: white; font-weight: 600; }
+
+.card-image-box { width: 100%; height: 160px; background-color: #0f1115; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.03); }
+.card-display-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; }
+.inventory-card p { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; }
+
+/* NEW: Manual Action Slider Interface Buttons styling */
+.carousel-control-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    padding: 0 8%;
+}
+
+.btn-carousel-ctrl {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid #222;
+    color: var(--text-muted);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.btn-carousel-ctrl:hover {
+    background-color: var(--gold);
+    color: var(--bg-dark);
+    border-color: var(--gold);
+}
+
+.carousel-indicator-bar {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+
+/* Opportunity Callout */
+.opportunity-breakout-box {
+    max-width: 950px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #131722 0%, #1a2233 100%);
+    border: 1px solid rgba(255, 204, 0, 0.2);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: left;
+}
+
+.opportunity-breakout-box h4 { font-size: 18px; color: var(--gold); margin-bottom: 8px; font-weight: 700; }
+.opportunity-breakout-box p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+
+}
+
+/* Mobile responsive constraints */
+@media (max-width: 600px) {
+    .inventory-card {
+        width: 280px; /* Slightly narrower layout width optimized for smaller cell phone screens */
+        padding: 10px;
+    }
+    .card-image-box {
+        height: 140px;
+    }
+}
+
+
+/* --- Outer Lock Container & Header Text Styles --- */
+
+.funnel-gatekeeper-section {
+    padding: 30px 8%;
+    background-color: var(--bg-dark);
+}
+
+.funnel-lock-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #12141c;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 50px 40px;
+    position: relative;
+    text-align: center;
+}
+
+.mandatory-ribbon {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffcc00;
+    color: #0f1115;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 4px 16px;
+    border-radius: 4px;
+}
+
+.funnel-lock-container h2 { 
+    font-size: 28px; 
+    color: white; 
+    margin-bottom: 12px; 
+    font-weight: 700; 
+    margin-top: 10px; 
+}
+
+.funnel-subtitle { 
+    font-size: 15px; 
+    color: var(--text-muted); 
+    line-height: 1.6; 
+    max-width: 650px; 
+    margin: 0 auto 40px auto; 
+}
+
+.funnel-subtitle strong { 
+    color: var(--gold); 
+}
+
+/* Mobile responsive padding constraints */
+@media (max-width: 600px) {
+    .funnel-lock-container {
+        padding: 35px 20px;
+    }
+    .funnel-lock-container h2 {
+        font-size: 24px;
+    }
+}
+
+/* --- Horizontal Onboarding Funnel Slider Layout --- */
+
+.funnel-slider-outer {
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+}
+
+.funnel-viewport {
+    width: 100%;
+    overflow-x: scroll; /* Ensures fluid tracking swiping rules on touch screens */
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 10px 0;
+}
+
+.funnel-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+.funnel-track {
+    display: flex;
+    gap: 20px;
+    width: max-content; /* Spreads layout out horizontally */
+    flex-wrap: nowrap;
+}
+
+/* Upgraded Full-Width Dynamic Funnel Step Node */
+.funnel-step-node {
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid #1c202a;
+    padding: 30px;
+    border-radius: 10px;
+    
+    /* Dynamic width footprint keeps steps perfectly scaled based on the viewport space */
+    width: 720px; 
+    max-width: 85vw; /* Keeps layout completely fluid on mobile monitors */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.node-top-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #1c202a;
+    padding-bottom: 15px;
+}
+
+.node-number {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+}
+
+.node-body h5 {
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+}
+
+.funnel-step-node p {
+    font-size: 14.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Micro Interactivity CTA anchors inside the slider nodes */
+.node-action-btn, .node-whatsapp-btn {
+    align-self: flex-start; /* Keeps the buttons clean and left-aligned */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: rgba(255, 204, 0, 0.08);
+    border: 1px solid rgba(255, 204, 0, 0.2);
+    color: var(--gold);
+    border-radius: 6px;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.node-action-btn:hover { background-color: var(--gold); color: #000; }
+
+.node-whatsapp-btn {
+    background-color: rgba(37, 211, 102, 0.08);
+    border: 1px solid rgba(37, 211, 102, 0.2);
+    color: #25d366;
+}
+
+.node-whatsapp-btn:hover { background-color: #25d366; color: #000; }
+
+/* Control Action Text Bars at base */
+.funnel-control-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.btn-funnel-ctrl {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s ease;
+}
+
+.btn-funnel-ctrl:hover {
+    color: var(--gold);
+}
+
+/* Mobile Layout Sizing Tweaks */
+@media (max-width: 600px) {
+    .funnel-step-node {
+        padding: 20px;
+    }
+    .node-top-header { gap: 10px; padding-bottom: 10px; }
+    .node-number { font-size: 26px; }
+}
+
+/* ==========================================================================
+   SECTION 4: VERIFIED OFFICIAL BRAND SOCIAL INTERACTION INDEX (60x60 VERSION)
+   ========================================================================== */
+
+.socials-index-section {
+    padding: 30px 8%;
+    background-color: #0c0e12;
+    border-top: 1px solid #1a1f2c;
+    text-align: center;
+}
+
+.socials-container-inner h4 { 
+    font-size: 18px; 
+    color: white; 
+    margin-bottom: 8px; 
+    font-weight: 600; 
+}
+
+.socials-container-inner p { 
+    font-size: 14px; 
+    color: var(--text-muted); 
+    margin-bottom: 15px; 
+}
+
+.social-links-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Spaces the cards evenly apart */
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Institutional Icon Dashboard Box Footprint Geometry (Exact 60px by 60px) */
+.social-icon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--card-bg);
+    border: 1px solid #1f2431;
+    border-radius: 8px;
+    
+    /* EXACT REQUESTED DIMENSIONS: */
+    width: 50px !important;
+    height: 50px !important; 
+    
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Vector Graphic Container sizing rules */
+.brand-vector-box {
+    width: 44px;   /* Sets compact sizing limits on the embedded SVG vector graphic */
+    height: 44px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+/* Forces native SVG paths to stretch smoothly inside the container */
+.brand-vector-box svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Clean Label Placement Layer: Locked perfectly right underneath the card */
+.brand-profile-label {
+    position: absolute;
+    bottom: -22px; /* Shifts text block completely out below the 60px bounding box boundary wall */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    white-space: nowrap; /* Stops long labels from breaking into double stacked rows */
+    transition: color 0.2s ease;
+}
+
+/* Hover Elevation Matrix States */
+.social-icon-card:hover {
+    transform: translateY(-3px);
+}
+
+.social-icon-card:hover .brand-profile-label {
+    color: white; /* Illuminates bottom text label on focus overlay matching */
+}
+
+/* Hardware Accelerated Brand Highlights Filters */
+.tiktok-brand:hover { border-color: #ff0050; box-shadow: 0 4px 12px rgba(255, 0, 80, 0.2); }
+.tiktok-brand:hover .brand-vector-box { color: #00f2fe; }
+
+.facebook-brand:hover { border-color: #1877f2; box-shadow: 0 4px 12px rgba(24, 119, 242, 0.25); }
+.facebook-brand:hover .brand-vector-box { color: #1877f2; }
+
+.instagram-brand:hover { border-color: #e1306c; box-shadow: 0 4px 12px rgba(225, 48, 108, 0.25); }
+.instagram-brand:hover .brand-vector-box { color: #e1306c; }
+
+.whatsapp-brand:hover { border-color: #25d366; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25); }
+.whatsapp-brand:hover .brand-vector-box { color: #25d366; }
+
+.gmail-brand:hover { border-color: #ea4335; box-shadow: 0 4px 12px rgba(234, 67, 53, 0.25); }
+.gmail-brand:hover .brand-vector-box { color: #ea4335; }
+
+/* Add bottom padding to container inner row calculation so labels don't clip the footer */
+.socials-container-inner {
+    padding-bottom: 15px;
+}
+
