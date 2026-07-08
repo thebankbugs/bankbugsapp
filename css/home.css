@@ -843,10 +843,20 @@ tv-ticker-tape {
     line-height: 1.6;
 }
 
-/* Opportunity Breakout Cushion adjustment spacing */
+/* Opportunity Callout */
 .opportunity-breakout-box {
     max-width: 1000px;
-    margin: 20px 8% 0 8%;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #131722 0%, #1a2233 100%);
+    border: 1px solid rgba(255, 204, 0, 0.2);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: left;
+}
+
+.opportunity-breakout-box h4 { font-size: 18px; color: var(--gold); margin-bottom: 8px; font-weight: 700; }
+.opportunity-breakout-box p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+
 }
 
 /* Mobile responsive constraints */
