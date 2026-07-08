@@ -137,8 +137,40 @@ if (funnelViewport && funnelLeftBtn && funnelRightBtn) {
     });
 }
 /**
+/**
  * BankBugs|FX - Trading Platforms Stack Interface Controller
+ * Optimized to bypass Sidebar Navigation Event Propagation Freezes
  */
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Platform structural architecture verification active.');
+(function() {
+    "use strict";
+
+    function initPlatformTriggers() {
+        // Target buttons strictly using class references to avoid layout clashing
+        const conversionButtons = document.querySelectorAll('.platform-cta-btn');
+
+        conversionButtons.forEach(button => {
+            // Direct click handling forced onto the event queue
+            button.addEventListener('click', function(event) {
+                // Allows navigation to execute cleanly without sidebar script interference
+                event.stopPropagation(); 
+                
+                const destination = this.getAttribute('href');
+                console.log(`Routing execution safely to: ${destination}`);
+                
+                // Fallback direct window location change to guarantee execution
+                if (destination) {
+                    window.location.href = destination;
+                }
+            }, false);
+        });
+    }
+
+    // Double-layer protection check: Execute immediately if DOM is already fully functional
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initPlatformTriggers);
+    } else {
+        initPlatformTriggers();
+    }
+})();
+
 });
