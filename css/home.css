@@ -1073,7 +1073,7 @@ tv-ticker-tape {
    ========================================================================== */
 
 .socials-index-section {
-    padding: 60px 8%;
+    padding: 30px 8%;
     background-color: #0c0e12;
     border-top: 1px solid #1a1f2c;
     text-align: center;
@@ -1089,13 +1089,13 @@ tv-ticker-tape {
 .socials-container-inner p { 
     font-size: 14px; 
     color: var(--text-muted); 
-    margin-bottom: 35px; 
+    margin-bottom: 15px; 
 }
 
 .social-links-grid {
     display: flex;
     justify-content: center;
-    gap: 24px; /* Spaces the cards evenly apart */
+    gap: 15px; /* Spaces the cards evenly apart */
     flex-wrap: wrap;
     max-width: 900px;
     margin: 0 auto;
@@ -1112,8 +1112,8 @@ tv-ticker-tape {
     border-radius: 8px;
     
     /* EXACT REQUESTED DIMENSIONS: */
-    width: 60px !important;
-    height: 60px !important; 
+    width: 50px !important;
+    height: 50px !important; 
     
     text-decoration: none;
     transition: transform 0.2s ease, border-color 0.2s, box-shadow 0.2s;
@@ -1123,8 +1123,8 @@ tv-ticker-tape {
 
 /* Vector Graphic Container sizing rules */
 .brand-vector-box {
-    width: 22px;   /* Sets compact sizing limits on the embedded SVG vector graphic */
-    height: 22px;
+    width: 44px;   /* Sets compact sizing limits on the embedded SVG vector graphic */
+    height: 44px;
     color: var(--text-muted);
     display: flex;
     align-items: center;
@@ -1179,7 +1179,7 @@ tv-ticker-tape {
 
 /* Add bottom padding to container inner row calculation so labels don't clip the footer */
 .socials-container-inner {
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 }
 
 
