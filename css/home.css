@@ -744,41 +744,121 @@ tv-ticker-tape {
 .section-header-centered h2 { font-size: 30px; color: white; margin-bottom: 12px; font-weight: 700; }
 .section-header-centered p { font-size: 16px; color: var(--text-muted); max-width: 600px; margin: 0 auto 50px auto; line-height: 1.6; }
 
-.inventory-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    max-width: 1000px;
-    margin: 0 auto 50px auto;
+/* --- Horizontal Sliding Infrastructure Carousel UI --- */
+
+.ecosystem-inventory {
+    padding: 60px 0 60px 0; /* Clears left/right padding so cards touch screen edges cleanly on slide */
+    background-color: #0c0e12;
+    border-top: 1px solid #1a1f2c;
+    text-align: center;
+    overflow: hidden;
 }
 
+.section-header-centered {
+    padding: 0 8%; /* Keeps header aligned with rest of site grids */
+}
+
+/* Viewport slider masking bounding box */
+.carousel-viewport {
+    width: 100%;
+    overflow-x: auto; /* Enables native browser horizontal swipe mechanics */
+    padding: 20px 8% 40px 8%; /* Hidden scroll cushion space */
+    scrollbar-width: none; /* Hides default ugly scrollbar track on Firefox */
+    -webkit-overflow-scrolling: touch; /* Forces hardware-accelerated fluid touch inertia on iOS/Android */
+}
+
+.carousel-viewport::-webkit-scrollbar {
+    display: none; /* Hides default ugly scrollbar track on Chrome/Safari/Edge */
+}
+
+/* Flex layout strip holding all 6 cards side-by-side */
+.carousel-track {
+    display: flex;
+    gap: 24px;
+    width: max-content; /* Forces content boundaries to expand infinitely to the right */
+}
+
+/* Premium Uniform Carousel Card Node Geometry */
 .inventory-card {
     background-color: var(--card-bg);
     border: 1px solid #1c202a;
-    border-radius: 8px;
-    padding: 30px 25px;
+    border-radius: 12px;
+    padding: 25px;
     text-align: left;
-    transition: transform 0.2s;
+    width: 320px; /* Fixed proportional card layout footprint size */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Clean grid vertical gap distribution inside cards */
+    transition: border-color 0.2s, transform 0.2s;
+    flex-shrink: 0; /* Prevents cards from getting squeezed flat by flexbox rules */
 }
 
-.inventory-card:hover { transform: translateY(-2px); border-color: #2b3142; }
-.inventory-icon { font-size: 26px; color: var(--action-blue); margin-bottom: 18px; display: block; }
-.inventory-card h3 { font-size: 18px; color: white; margin-bottom: 10px; font-weight: 600; }
-.inventory-card p { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+.inventory-card:hover {
+    transform: translateY(-4px);
+    border-color: #2b3142;
+}
 
-/* Opportunity Callout */
+.card-header-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.inventory-icon {
+    font-size: 22px;
+    color: var(--action-blue);
+}
+
+.inventory-card h3 {
+    font-size: 17px;
+    color: white;
+    font-weight: 600;
+}
+
+/* Absolute Protected Image Box Frame Layout */
+.card-image-box {
+    width: 100%;
+    height: 160px; /* Uniform boundary block height across all 6 slides */
+    background-color: #0f1115;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.card-display-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Centers and slices image inside box frame without warping proportions */
+    opacity: 0.85;
+    transition: opacity 0.3s;
+}
+
+.inventory-card:hover .card-display-img {
+    opacity: 1; /* Brightens up on hover focus matrix matches */
+}
+
+.inventory-card p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Opportunity Breakout Cushion adjustment spacing */
 .opportunity-breakout-box {
     max-width: 1000px;
-    margin: 0 auto;
-    background: linear-gradient(135deg, #131722 0%, #1a2233 100%);
-    border: 1px solid rgba(255, 204, 0, 0.2);
-    border-radius: 8px;
-    padding: 30px;
-    text-align: left;
+    margin: 20px 8% 0 8%;
 }
 
-.opportunity-breakout-box h4 { font-size: 18px; color: var(--gold); margin-bottom: 8px; font-weight: 700; }
-.opportunity-breakout-box p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+/* Mobile responsive constraints */
+@media (max-width: 600px) {
+    .inventory-card {
+        width: 280px; /* Slightly narrower layout width optimized for smaller cell phone screens */
+        padding: 20px;
+    }
+    .card-image-box {
+        height: 140px;
+    }
+}
 
 /* 3-Step Funnel Section */
 .funnel-gatekeeper-section {
