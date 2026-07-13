@@ -1231,3 +1231,53 @@ tv-ticker-tape {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   }
 }
+/* Container scales flawlessly across Mobile, Tablet, and Desktop */
+.fintech-bg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #080a0f; /* Deep terminal black */
+  z-index: -1;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0); /* Forces GPU rendering on mobile */
+}
+
+/* Abstract Bloomberg/TradingView style grid */
+.fintech-grid {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 255, 200, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 255, 200, 0.02) 1px, transparent 1px);
+  transform: rotate(-12deg); /* Isometric trading screen angle */
+}
+
+/* Ambient liquidity glow behind your influencer content */
+.fintech-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 98, 255, 0.15) 0%, rgba(0,0,0,0) 70%);
+  top: 10%;
+  right: -10%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* Mobile optimization: reduces grid size so it stays crisp on small screens */
+@media (max-width: 768px) {
+  .fintech-grid {
+    background-size: 30px 30px;
+  }
+  .fintech-glow {
+    width: 300px;
+    height: 300px;
+  }
+}
